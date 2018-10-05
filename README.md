@@ -22,7 +22,6 @@ Use:
 
      ex: 
      AppName:  TestApp
-     
      Title Id: 01000F2300000000 *Must be 16 Characters long in hex form*    
      Made by:  Matt_Teix          	
      Version:  1.0.0
