@@ -1,4 +1,3 @@
-# Nro2Nsp
 This is a very early project and is actually my first attempt at c# 
 code is messy right now but seems to work well... hopefully
 
@@ -6,18 +5,26 @@ Requirements:
 -------------
 - Devkitpro for Compiling libnx https://switchbrew.org/wiki/Setting_up_Development_Environment
 - Keys.dat file added to the "Resources" folder -- refer to "keys.dat template for layout and required keys
-- Windows OS
+- .NetFramework for win https://www.microsoft.com/en-ca/download/details.aspx?id=49981
+- Mono for Mac or Linux https://www.mono-project.com/
 
 Special notes:
 --------------
 * Authoring tools no longer needed thanks to "The-4n" https://github.com/The-4n/hacBrewPack *
-* Icons now need to be 256x256 .jpg *
-* Compile button will only be visable once all requirements are met - Change app name, Change Author, Change title   id, Add icon, Pick Sdmc with path or Pick romfs with a valid .nro *
-* If you dont properly fill out the meta info before importing icon and filling out the romfs/sdmc section then the   compile button may not enable. Fix you meta info and either reload the icon or reset your romfs/sdmc info.*
+* Icons no longer need speical size or format*
+* conrol.nacp now built in app, no more linkle
+* Now uses winform, can use mono for mac/linux
+* Mac and linux may experiance bugs or weird issues due to mono
+* Big Chnage have been made in the code, Bugs maybe be present. If found please report them.
+* Linux use hasnt been tested fully, may experiance issues
 
 Use:
 ----
-- Run Nro2Nsp.exe
+- Windows -- Run Nro2Nsp.exe
+- Mac/Linux -- open terminal.app
+            -- cd to folder ex: cd Desktop/Nro2Nsp
+            -- run "sudo mono --arch=32 ./Nro2Nsp.exe
+
 - Add you nsp details 
 
      ex: 
@@ -48,19 +55,29 @@ Credits:
 --------
          "Switchbrew" for the hblauncher source https://github.com/switchbrew/nx-hbloader
 	 "The-4n" for Hacbrewpack   https://github.com/The-4n/hacBrewPack
-	 "MegatonHammer" for Linkle https://github.com/MegatonHammer/linkle
 	 "alexzzz9" for the hblauncher source and providing useful help
 	 The Whole WarezNx Discord for all the tools/information to make all of this possible
 
 Todo:
 -----
-- Learn more c# coding
-- Clean up code -started-
-- Make App look nicer -started-
-- Add exception handling -started-
-- osx and linux support 
+-- clean up new code
+-- unknown at this time
 Change log:
 -----------
+
+v3.2
+-- Rewrote code for better structure
+-- uses winforms now and compatable with mono for multiplatform support
+-- rebuilt resources data into .dll library
+-- Added more checks and error reports
+-- Added log.txt in "Resources" for trobuleshooting
+-- added building message (only functional on win)
+-- removed linkle and added in app control.nacp building
+-- Compile button always enabled now, message box will inform of missing information
+-- Added image converting, any type/size should work
+-- bug fixes
+-- stability improvement ;)
+
 
 V3.0.1
 - fixed bug with speacial characters in app name
