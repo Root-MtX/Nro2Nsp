@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{EDC34B1C-3E33-43A5-84B0-D550ABBAF42F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Nro2Nsp/Form1.cs">
+    <Files>
+      <File FileName="Nro2Nsp/Form1.cs" Line="187" Column="1" />
+      <File FileName="Nro2Nsp/Form1.Designer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Nro2Nsp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
