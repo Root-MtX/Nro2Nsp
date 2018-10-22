@@ -1,5 +1,4 @@
-This is a very early project and is actually my first attempt at c# 
-code is messy right now but seems to work well... hopefully
+
 
 Requirements: 
 -------------
