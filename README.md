@@ -28,11 +28,11 @@ Use:
 
      ex: 
      AppName:  TestApp
-     Title Id: 01000F2300000000 *Must be 16 Characters long in hex form*    
+     Title Id: 01000F2300000000 *Must be 16 Characters long in hex form and start with 01*    
      Made by:  Matt_Teix          	
      Version:  1.0.0
 
-- Import your icon by clicking the Icon box *Must be 256 x 256 .jpg*
+- Import your icon by clicking the Icon box 
 - You have two choices for paths
 
   sdmc: For loading an nro from an sd path *Nsp does not contain the nro, it only points to it*
