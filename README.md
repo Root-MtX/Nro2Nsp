@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
-=======
 
->>>>>>> 1da8998d3d8790a08ce6cc07f9e520ff3139f75a
+This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
+
 
 Requirements: 
 -------------
