@@ -8,9 +8,9 @@ C:\Users\Matts_Surface\source\repos\Nro2Nsp\ClassLibrary1\obj\Release\MtX.Contro
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\ClassLibrary1\obj\Release\MtX.Control.pdb
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\bin\Release\MtX.Control.dll
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\bin\Release\MtX.Control.pdb
-C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Release\Control.csprojAssemblyReference.cache
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Release\MtX.Control.Properties.Resources.resources
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Release\Control.csproj.GenerateResource.cache
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Release\Control.csproj.CoreCompileInputs.cache
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Release\MtX.Control.dll
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Release\MtX.Control.pdb
+C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\bin\Release\MtX.Control.dll.config

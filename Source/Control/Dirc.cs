@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
+using MtX.Control.Properties;
 
 
 namespace MtX.Control
@@ -76,6 +77,17 @@ namespace MtX.Control
             catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
+        public static void CleanLog()
+        {
+            try
+            { 
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                if (File.Exists(System.IO.Path.Combine(current_directory, @"./Resources/log.txt"))) File.Delete(System.IO.Path.Combine(current_directory, @"./Resources/log.txt"));
+            }
+            catch (Exception e) { MessageBox.Show(e.Message); }
+        }
+
         public void OutputCopy()
         { 
             string nspsource = @buildpath;
@@ -83,10 +95,33 @@ namespace MtX.Control
             string nspsourceFile = System.IO.Path.Combine(nspsource, nsp);
             string filename = Control.Tools.RemoveSpecialCharacters(AppName + "_" + TitleId + ".nsp");
             string nspdestFile = System.IO.Path.Combine(current_directory, filename);
+            string RawNca = buildpath + "nca";
+            string RawExefs = buildpath + "build/exefs";
+            string RawControl = buildpath + controlpath;
+            
             MessageBox.Show("Your Nsp \"" + AppName + "\" Was Successfully Created!");
-            try { System.IO.File.Copy(nspsourceFile, nspdestFile, true); }
+            try {
+                System.IO.File.Copy(nspsourceFile, nspdestFile, true);
+                if (Convert.ToBoolean(Settings.Default["PerserveDataEnable"]) == true)
+                {
+                    PerseveCopy(RawControl, System.IO.Path.Combine(current_directory, "RawData/control/"));
+                    PerseveCopy(RawExefs, System.IO.Path.Combine(current_directory, "RawData/exefs/"));
+                    PerseveCopy(RawNca, System.IO.Path.Combine(current_directory, "RawData/nca/"));
+                }
+            }
             catch (Exception e)
             { MessageBox.Show(e.Message + System.Environment.NewLine + "It appears building the nsp failed, please verify the proper keys are in keys.dat file -- refer to Keys.dat template.txt");}
+        }
+
+        void PerseveCopy(string sourceDir, string targetDir)
+        {
+            Directory.CreateDirectory(targetDir);
+
+            foreach (var file in Directory.GetFiles(sourceDir))
+                File.Copy(file, Path.Combine(targetDir, Path.GetFileName(file)), true);
+
+            foreach (var directory in Directory.GetDirectories(sourceDir))
+                PerseveCopy(directory, Path.Combine(targetDir, Path.GetFileName(directory)));
         }
     }
 }

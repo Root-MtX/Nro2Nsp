@@ -1,21 +1,20 @@
-This is a very early project and is actually my first attempt at c# 
-code is messy right now but seems to work well... hopefully
+This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
 
 Requirements: 
 -------------
-- Devkitpro for Compiling libnx https://switchbrew.org/wiki/Setting_up_Development_Environment
+- Devkitpro for Compiling libnx *newest version* https://switchbrew.org/wiki/Setting_up_Development_Environment
 - Keys.dat file added to the "Resources" folder -- refer to "keys.dat template for layout and required keys
 - .NetFramework for win https://www.microsoft.com/en-ca/download/details.aspx?id=49981
 - Mono for Mac or Linux https://www.mono-project.com/
 
 Special notes:
 --------------
-* Authoring tools no longer needed thanks to "The-4n" https://github.com/The-4n/hacBrewPack *
-* Icons no longer need speical size or format*
-* conrol.nacp now built in app, no more linkle
+* Requires Newest Devkitpro update due to changes, update before use
+* Some nros are not working with romfs (newest tinfoil, dOPUS) use sdmc for now
+* Icons no longer need speical size or format
 * Now uses winform, can use mono for mac/linux
 * Mac and linux may experiance bugs or weird issues due to mono
-* Big Chnage have been made in the code, Bugs maybe be present. If found please report them.
+* Big Changes have been made in the code, Bugs maybe be present. If found please report them.
 * Linux use hasnt been tested fully, may experiance issues
 
 Use:
@@ -33,7 +32,7 @@ Use:
      Made by:  Matt_Teix          	
      Version:  1.0.0
 
-- Import your icon by clicking the Icon box *Must be 256 x 256 .jpg*
+- Import your icon by clicking the Icon box 
 - You have two choices for paths
 
   sdmc: For loading an nro from an sd path *Nsp does not contain the nro, it only points to it*
@@ -50,6 +49,13 @@ Use:
 - Wait for compiling to finsh
 - Your .Nsp should be good to go!
 
+Settings:
+---------
+- Custom Devkitpro Path: Set the path to your devkitpro path if installed in different locations than default
+- Preset Author: Set the default author, speed things up if using the same one
+- Rolling Title Id: Set the base Title Id and after each build it'll increase by 1
+- Perserve Data: Saves exefs, contol, and nca data in ./RawData folder
+
 
 Credits: 
 --------
@@ -60,10 +66,23 @@ Credits:
 
 Todo:
 -----
--- clean up new code
--- unknown at this time
+-- Clean up new code
+-- fix certain .nros not working with romfs
+-- Maybe include Devkitpro so installing wouldnt be requried
+
 Change log:
 -----------
+
+v3.2.1
+-- fixed issue with newest devkitpro update *now requires latest to build*
+-- added settings tab 
+-- fixed makefile naming for linux
+-- fixed dekitpro location error if running app from remote drive
+-- added rolling title id 
+-- added preset author
+-- added custom devkitpto
+-- added perserve data
+
 
 v3.2
 -- Rewrote code for better structure

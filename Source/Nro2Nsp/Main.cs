@@ -4,6 +4,7 @@ using System.IO;
 using MtX.Control;
 using System.Drawing;
 using System.Threading;
+using MtX.Control.Properties;
 
 namespace MtX.Nro2Nsp
 {
@@ -14,12 +15,16 @@ namespace MtX.Nro2Nsp
         string nropath = null;
         string nroname = null;
 
+
         public Nro()
         {
             InitializeComponent();
             //Clean Working Directory to avoid unawated files during compile 
             if (Directory.Exists(MtX.Control.DircControl.root))
             { MtX.Control.DircControl.CleanTemp(); }
+            if (File.Exists(MtX.Control.DircControl.current_directory + @"./Resources/log.txt"))
+            { Control.DircControl.CleanLog(); }
+            Reload("Preset Settings:");
         }
 
         private void Import_Pictures(object sender, EventArgs e)
@@ -37,7 +42,7 @@ namespace MtX.Nro2Nsp
                 Icon_Button.BackgroundImage = Image.FromFile(DircControl.buildpath + DircControl.controlpath + @"icon_AmericanEnglish.dat");
             }
         }
-    
+
 
         private void RadioButton_Checked(object sender, EventArgs e)
         {
@@ -74,7 +79,7 @@ namespace MtX.Nro2Nsp
                 }
             }
         }
-        
+
         private void Input_restrict(object sender, KeyPressEventArgs e)
         {
             Int32 AllowedLines = 16;
@@ -88,7 +93,6 @@ namespace MtX.Nro2Nsp
 
         private void Compile_button_Click(object sender, EventArgs e)
         {
-            // Make Directories and copy required files before checking system setup
             Control.DircControl.BuildTemp();
 
             Tools Checks = new Tools
@@ -100,32 +104,32 @@ namespace MtX.Nro2Nsp
                 Line = line
             };
 
-                if (Checks.Compile_Checks() == true)
+            if (Checks.Compile_Checks() == true)
+            {
+                Nacp nacp = new Nacp
                 {
-                    Nacp nacp = new Nacp
-                    {
-                        TitleId = id_box.Text,
-                        AppName = name_box.Text,
-                        Author = author_box.Text,
-                        Version = version_box.Text
-                    };
-                    nacp.Build();
+                    TitleId = id_box.Text,
+                    AppName = name_box.Text,
+                    Author = author_box.Text,
+                    Version = version_box.Text
+                };
+                nacp.Build();
 
-                    Source make = new Source
-                    {
-                        TitleId = id_box.Text,
-                        AppName = name_box.Text,
-                        Author = author_box.Text,
-                        Version = version_box.Text,
-                        Path_Sd = sdmc_path.Text,
-                        Path_Romfs = romfs_path.Text,
-                        Line = line,
-                        NroName = nroname,
-                        NroPath = nropath
-                    };
-                    make.Meta();
-                    make.Build();
-                    Control.Tools.LsLog();
+                Source make = new Source
+                {
+                    TitleId = id_box.Text,
+                    AppName = name_box.Text,
+                    Author = author_box.Text,
+                    Version = version_box.Text,
+                    Path_Sd = sdmc_path.Text,
+                    Path_Romfs = romfs_path.Text,
+                    Line = line,
+                    NroName = nroname,
+                    NroPath = nropath
+                };
+                make.Meta();
+                make.Build();
+                Control.Tools.LsLog();
 
                 new Thread(() => new PleaseWait().ShowDialog()).Start();
                 try
@@ -164,15 +168,44 @@ namespace MtX.Nro2Nsp
             }
 
             DircControl copy = new DircControl
-                {
-                    TitleId = id_box.Text,
-                    AppName = name_box.Text
-                };
-                if (File.Exists(DircControl.buildpath + id_box.Text + ".nsp")) { copy.OutputCopy(); }
-                else { MessageBox.Show("Builing of Nsp Failed, Please refer to logs"); }
-                Icon_Button.BackgroundImage = Properties.Resources._default;
-                if (Directory.Exists(MtX.Control.DircControl.root))
-                { MtX.Control.DircControl.CleanTemp(); }
-            }
+            {
+                TitleId = id_box.Text,
+                AppName = name_box.Text
+            };
+            if (File.Exists(DircControl.buildpath + id_box.Text + ".nsp")) { copy.OutputCopy(); }
+            else { MessageBox.Show("Builing of Nsp Failed, Please refer to logs"); }
+            Icon_Button.BackgroundImage = Properties.Resources._default;
+            if (Convert.ToBoolean(Settings.Default["RollingIdEnable"]) == true)
+             { Control.Tools.IncreaseRollingId(); }
+            if (Directory.Exists(MtX.Control.DircControl.root))
+             { MtX.Control.DircControl.CleanTemp(); }
+            Reload("Post Build:");
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsMenu SettingsDialog = new SettingsMenu();
+            SettingsDialog.ShowDialog();
+            Reload("Settings Changed:");
+        }
+
+        public void Reload(String Called)
+        {
+            Settings.Default.Reload();
+            Tools.Logger(Called);
+            Tools.Logger("Custom Devkit Enable: " + Convert.ToBoolean(Settings.Default["CustomDevkitEnable"]));
+            Tools.Logger("Custom Devkit Path: " + Settings.Default["CustomDevkitPath"].ToString());
+            Tools.Logger("Preset Author Enable: " + Convert.ToBoolean(Settings.Default["SetAuthorEnable"]));
+            Tools.Logger("Preset Authot Value: " + Settings.Default["SetAuthor"].ToString());
+            Tools.Logger("Rolling Id Enable: " + Convert.ToBoolean(Settings.Default["RollingIdEnable"]));
+            Tools.Logger("Rolling Id Value: " + Settings.Default["BaseRollingId"].ToString());
+            Tools.Logger("Perserve Data Enable: " + Convert.ToBoolean(Settings.Default["PerserveDataEnable"]));
+
+            if (Convert.ToBoolean(Settings.Default["RollingIdEnable"]) == true)
+            { id_box.Text = Settings.Default["BaseRollingId"].ToString(); }
+            if (Convert.ToBoolean(Settings.Default["SetAuthorEnable"]) == true)
+            { author_box.Text = Settings.Default["SetAuthor"].ToString(); }
         }
     }
+
+}

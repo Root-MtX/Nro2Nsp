@@ -34,13 +34,13 @@ namespace MtX.Control
             File.WriteAllText(Control.DircControl.buildpath + "app.json", Json);
 
             //replace inputed meta data to .json for building makefile
-            File.WriteAllBytes(Control.DircControl.buildpath + "makefile", Properties.Resources.mkf);
-            string Make = File.ReadAllText(Control.DircControl.buildpath + "makefile");
+            File.WriteAllBytes(Control.DircControl.buildpath + "Makefile", Properties.Resources.mkf);
+            string Make = File.ReadAllText(Control.DircControl.buildpath + "Makefile");
             Make = Make.Replace("Title_ID", TitleId);
             Make = Make.Replace("App_Name", AppName);
             Make = Make.Replace("Created_By", Author);
             Make = Make.Replace("Version_Number", Version);
-            File.WriteAllText(Control.DircControl.buildpath + "makefile", Make);
+            File.WriteAllText(Control.DircControl.buildpath + "Makefile", Make);
         }
 
         public void Build()

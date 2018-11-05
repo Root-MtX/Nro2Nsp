@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Linq;
 using System.Threading;
+using MtX.Control.Properties;
+
 
 
 namespace MtX.Control
@@ -102,7 +104,7 @@ namespace MtX.Control
             buildnsp += "nca " + "--nspdir " + DircControl.buildpath + " --exefsdir " + DircControl.buildpath;
             buildnsp += @"build/exefs" + " --romfsdir " + DircControl.buildpath + DircControl.romfspath;
             buildnsp += " --logodir " + DircControl.buildpath + DircControl.logopath + " --controldir ";
-            buildnsp += DircControl.buildpath + DircControl.controlpath;
+            buildnsp += DircControl.buildpath + DircControl.controlpath + " --keepncadir";
             return buildnsp;
         }
 
@@ -142,17 +144,19 @@ namespace MtX.Control
         {
             string Keys = Control.DircControl.buildpath + "keys.dat";
             string root = System.IO.Path.GetPathRoot(Environment.CurrentDirectory);
-            string dev_kit_win = @"\DEVKITPRO\libnx\include\switch.h";
+            string dev_kit_win = @"C:\DEVKITPRO\libnx\include\switch.h";
             string dev_kit_unix = root + @"/opt/devkitpro/libnx/include/switch.h";
+            string CustomDevkitPath = Settings.Default["CustomDevkitPath"].ToString() + @"\libnx\include\switch.h";
             string imgfind = (Control.DircControl.buildpath + Control.DircControl.controlpath + "icon_AmericanEnglish.dat");
             bool[] ArrayCheck = new bool[8];
             char[] IdChar = IdBox.ToCharArray();
-            ArrayCheck[0] = File.Exists(Keys); ArrayCheck[1] = File.Exists(dev_kit_win) || File.Exists(dev_kit_unix);
+            ArrayCheck[0] = File.Exists(Keys); ArrayCheck[1] = File.Exists(dev_kit_win) || File.Exists(dev_kit_unix) || File.Exists(CustomDevkitPath);
             ArrayCheck[2] = NameBox.Length > 0 && NameBox != "App Name"; ArrayCheck[3] = IdBox.Length == 16 && IdBox != "01000A0000000000" && IdChar[0] == '0' && IdChar[1] == '1';
             ArrayCheck[4] = AuthorBox.Length > 0 && AuthorBox != "Author"; ArrayCheck[5] = VersionBox.Length > 0;
             ArrayCheck[6] = File.Exists(imgfind); ArrayCheck[7] = Line != null;
 
-            string[] Errors = { "Could not locate \"Keys.dat\", Please verify its named correctly and located in the \"Resources\" folder", "Devkitpro missing, Make sure its installed and restart the program",
+
+            string[] Errors = { "Could not locate \"Keys.dat\", Please verify its named correctly and located in the \"Resources\" folder", "Devkitpro missing, Make sure its installed or set the custom path in the settings",
             "Entered \"App Name\" is not vaild, Please change and retry", "Entered \"Title Id\" is not vaild, Please change and retry *Vaild Title Id is to start with a 01 and be 16 Hex char long ex. 01XXXXXXXXXXXXXX",
             "Entered \"Author\" is not vaild, Please change and retry","Entered \"Version\" is not vaild, Please change and retry", "Icon is Missing, Please verify a Icon was provided and rety",
             "\"Romfs\" or \"Sdmc\" was not selected, Please select as required and retry" };
@@ -169,7 +173,6 @@ namespace MtX.Control
             string logPath = @"./Resources/log.txt";
             using (StreamWriter Logger = new StreamWriter(logPath, true))
             {
-
                 Logger.WriteLine(LogInput);
             }
         }
@@ -185,8 +188,40 @@ namespace MtX.Control
             }
             Logger("");
         }
+
+        public static void IncreaseRollingId()
+        {
+            string BaseRollingId = Settings.Default["BaseRollingId"].ToString();
+            char[] BaseRollingIdCharArray = BaseRollingId.ToCharArray();
+            int x = 15;
+            bool Continue = false;
+            do
+            {
+                if (BaseRollingIdCharArray[x] == '9')
+                {
+                    BaseRollingIdCharArray[x] = 'A';
+                    Continue = false;
+                }
+                else if (!(BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
+                {
+                    BaseRollingIdCharArray[x] = ++BaseRollingIdCharArray[x];
+                    Continue = false;
+                }
+                else if ((BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
+                {
+                    BaseRollingIdCharArray[x] = '0';
+                    Continue = true;
+                    x--;
+                }
+            }
+            while (Continue == true);
+            Settings.Default["BaseRollingId"] = new string(BaseRollingIdCharArray);
+            Settings.Default.Save();
+        }
+
     }
-}
+    }
+
 
 
 

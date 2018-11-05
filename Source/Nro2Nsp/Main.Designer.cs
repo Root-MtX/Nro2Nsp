@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nro));
             this.compile_button = new System.Windows.Forms.Button();
-            this.Icon_Button = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.sdmc_select = new System.Windows.Forms.RadioButton();
             this.romfs_select = new System.Windows.Forms.RadioButton();
@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.SettingsButton = new System.Windows.Forms.Button();
+            this.Icon_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // compile_button
@@ -55,22 +57,6 @@
             this.compile_button.Text = "Compile";
             this.compile_button.UseVisualStyleBackColor = true;
             this.compile_button.Click += new System.EventHandler(this.Compile_button_Click);
-            // 
-            // Icon_Button
-            // 
-            this.Icon_Button.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Icon_Button.BackgroundImage = global::MtX.Nro2Nsp.Properties.Resources._default;
-            this.Icon_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Icon_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Icon_Button.FlatAppearance.BorderSize = 2;
-            this.Icon_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.Icon_Button.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon_Button.Location = new System.Drawing.Point(325, 48);
-            this.Icon_Button.Name = "Icon_Button";
-            this.Icon_Button.Size = new System.Drawing.Size(157, 157);
-            this.Icon_Button.TabIndex = 9;
-            this.Icon_Button.UseVisualStyleBackColor = false;
-            this.Icon_Button.Click += new System.EventHandler(this.Import_Pictures);
             // 
             // openFileDialog1
             // 
@@ -203,11 +189,39 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Version:";
             // 
+            // SettingsButton
+            // 
+            this.SettingsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SettingsButton.BackgroundImage")));
+            this.SettingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SettingsButton.Location = new System.Drawing.Point(473, 351);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(28, 26);
+            this.SettingsButton.TabIndex = 14;
+            this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // Icon_Button
+            // 
+            this.Icon_Button.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon_Button.BackgroundImage = global::MtX.Nro2Nsp.Properties.Resources._default;
+            this.Icon_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Icon_Button.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Icon_Button.FlatAppearance.BorderSize = 2;
+            this.Icon_Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.Icon_Button.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon_Button.Location = new System.Drawing.Point(325, 48);
+            this.Icon_Button.Name = "Icon_Button";
+            this.Icon_Button.Size = new System.Drawing.Size(157, 157);
+            this.Icon_Button.TabIndex = 9;
+            this.Icon_Button.UseVisualStyleBackColor = false;
+            this.Icon_Button.Click += new System.EventHandler(this.Import_Pictures);
+            // 
             // Nro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(513, 389);
+            this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -224,7 +238,7 @@
             this.Controls.Add(this.compile_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Nro";
-            this.Text = "Nro2Nsp Version 3.2 -- MtX ";
+            this.Text = "Nro2Nsp Version 3.2.1 -- MtX ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,6 +261,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button SettingsButton;
     }
 }
 
