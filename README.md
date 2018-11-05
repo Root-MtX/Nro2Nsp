@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
+=======
+
+>>>>>>> 1da8998d3d8790a08ce6cc07f9e520ff3139f75a
 
 Requirements: 
 -------------
@@ -28,7 +32,7 @@ Use:
 
      ex: 
      AppName:  TestApp
-     Title Id: 01000F2300000000 *Must be 16 Characters long in hex form*    
+     Title Id: 01000F2300000000 *Must be 16 Characters long in hex form and start with 01*    
      Made by:  Matt_Teix          	
      Version:  1.0.0
 
