@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
-=======
 
->>>>>>> 1da8998d3d8790a08ce6cc07f9e520ff3139f75a
+This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
+
 
 
 Whats New:
@@ -18,7 +16,7 @@ v3.2.2
 Requirements: 
 -------------
 - Devkitpro for Compiling libnx *newest version* https://switchbrew.org/wiki/Setting_up_Development_Environment
-- Keys.dat file added to the "Resources" folder -- refer to "keys.dat template for layout and required keys
+- Keys.dat file added to the "Resources" folder -- refer to "keys.dat template" for layout and required keys
 - .NetFramework for win https://www.microsoft.com/en-ca/download/details.aspx?id=49981
 - Mono for Mac or Linux https://www.mono-project.com/
 
@@ -36,10 +34,16 @@ Special notes:
 
 Use:
 ----
-- Windows -- Run Nro2Nsp.exe
-- Mac/Linux -- open terminal.app
-            -- cd to folder ex: cd Desktop/Nro2Nsp
-            -- run "sudo mono --arch=32 ./Nro2Nsp.exe
+- Windows
+----------
+- Run Nro2Nsp.exe
+
+- Mac/Linux 
+------------
+
+- open terminal.app
+- cd to folder ex: cd Desktop/Nro2Nsp
+- run "sudo mono --arch=32 ./Nro2Nsp.exe
 
 - Add you nsp details 
 
