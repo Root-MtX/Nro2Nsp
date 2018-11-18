@@ -12,6 +12,7 @@ v3.2.2
 - Added: Auto import .nro icon, app name, author, and version
 - Fixed: .netframework error certain people were experiancing
 - Fixed: some settings being set by default
+- Fixed: Removed (MtX) tag from Author
 
 Requirements: 
 -------------
@@ -105,6 +106,7 @@ v3.2.2
 -- Added: Auto import .nro icon, app name, author, and version
 -- Fixed: .netframework error certain people were experiancing
 -- Fixed: some settings being set by default
+-- Fixed: Removed (MtX) tag from Author
  
 v3.2.1
 -- fixed issue with newest devkitpro update *now requires latest to build*
