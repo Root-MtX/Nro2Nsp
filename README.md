@@ -6,12 +6,12 @@ This is an easy to use nsp builder that will make rediction nsps or internally b
 Whats New:
 -----------
 v3.2.2
--- Added: Title Ids changed to 05xxxxxxxxxx0000 format
--- Fixed: Rolling Id adjusted to new id format
--- Added: Randomize Title id button added
--- Added: Auto import .nro icon, app name, author, and version
--- Fixed: .netframework error certain people were experiancing
--- Fixed: some settings being set by default
+- Added: Title Ids changed to 05xxxxxxxxxx0000 format
+- Fixed: Rolling Id adjusted to new id format
+- Added: Randomize Title id button added
+- Added: Auto import .nro icon, app name, author, and version
+- Fixed: .netframework error certain people were experiancing
+- Fixed: some settings being set by default
 
 Requirements: 
 -------------
