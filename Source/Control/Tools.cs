@@ -18,7 +18,8 @@ namespace MtX.Control
         public string IdBox { get; set; }
         public string VersionBox { get; set; }
         public string Line { get; set; }
-
+        
+        // Building source and nsp for win
         public static void WinCommand(string Excu, string Args, bool Input, bool Window)
         {
             ProcessStartInfo info = new ProcessStartInfo()
@@ -38,6 +39,7 @@ namespace MtX.Control
         }
 
 
+        // Building source and nsp for unix
         public static void UnixCommand(string TitleId)
         {
             String[] Args = { "export DEVKITPRO=/opt/devkitpro", "export DEVKITARM=/opt/devkitpro/devkitARM", "export DEVKITARM=/opt/devkitpro/devkitA64",
@@ -71,6 +73,7 @@ namespace MtX.Control
         }
 
 
+        //Remove special characters from AppName to Prevent errors during build 
         public static string RemoveSpecialCharacters(string str)
         {
             StringBuilder sb = new StringBuilder();
@@ -83,6 +86,7 @@ namespace MtX.Control
         }
 
 
+        // Hackbrewpac command per OS
         public static string HacPackBrew()
         {
             string buildnsp;
@@ -109,6 +113,7 @@ namespace MtX.Control
         }
 
 
+        // Check running platform 
         public enum Platform
         {
             Windows,
@@ -120,8 +125,6 @@ namespace MtX.Control
             switch (Environment.OSVersion.Platform)
             {
                 case PlatformID.Unix:
-                    // Well, there are chances MacOSX is reported as Unix instead of MacOSX.
-                    // Instead of platform check, we'll do a feature checks (Mac specific root folders)
                     if (Directory.Exists("/Applications")
                         & Directory.Exists("/System")
                         & Directory.Exists("/Users")
@@ -139,9 +142,10 @@ namespace MtX.Control
         }
 
 
-
+        // Compile checkes for building
         public bool Compile_Checks()
         {
+            bool OldKeyStyle = Convert.ToBoolean(Settings.Default["OldTitleKeyEnable"]);
             string Keys = Control.DircControl.buildpath + "keys.dat";
             string root = System.IO.Path.GetPathRoot(Environment.CurrentDirectory);
             string dev_kit_win = @"C:\DEVKITPRO\libnx\include\switch.h";
@@ -150,75 +154,152 @@ namespace MtX.Control
             string imgfind = (Control.DircControl.buildpath + Control.DircControl.controlpath + "icon_AmericanEnglish.dat");
             bool[] ArrayCheck = new bool[8];
             char[] IdChar = IdBox.ToCharArray();
+
+            //Array of checks to enable compiling
             ArrayCheck[0] = File.Exists(Keys); ArrayCheck[1] = File.Exists(dev_kit_win) || File.Exists(dev_kit_unix) || File.Exists(CustomDevkitPath);
-            ArrayCheck[2] = NameBox.Length > 0 && NameBox != "App Name"; ArrayCheck[3] = IdBox.Length == 16 && IdBox != "01000A0000000000" && IdChar[0] == '0' && IdChar[1] == '1';
+            ArrayCheck[2] = NameBox.Length > 0 && NameBox != "App Name"; ArrayCheck[3] = (OldKeyStyle == true && IdBox.Length == 16 && IdBox != "05000A0000000000" && IdChar[0] == '0' && IdChar[1] == '5') ||
+                            (OldKeyStyle == false && IdBox.Length == 16 && IdBox != "05000A0000000000" && IdChar[0] == '0' && IdChar[1] == '5' && IdChar[12] == '0' && IdChar[13] == '0' && IdChar[14] == '0' && IdChar[15] == '0');
             ArrayCheck[4] = AuthorBox.Length > 0 && AuthorBox != "Author"; ArrayCheck[5] = VersionBox.Length > 0;
             ArrayCheck[6] = File.Exists(imgfind); ArrayCheck[7] = Line != null;
 
-
+            //Array of messgages corrosponding to the check if failed
             string[] Errors = { "Could not locate \"Keys.dat\", Please verify its named correctly and located in the \"Resources\" folder", "Devkitpro missing, Make sure its installed or set the custom path in the settings",
-            "Entered \"App Name\" is not vaild, Please change and retry", "Entered \"Title Id\" is not vaild, Please change and retry *Vaild Title Id is to start with a 01 and be 16 Hex char long ex. 01XXXXXXXXXXXXXX",
+            "Entered \"App Name\" is not vaild, Please change and retry", "Entered \"Title Id\" is not vaild, Please change and retry *Vaild Title Id is to start with a 05, ends in 0000, and be 16 Hex char long ex. 05XXXXXXXXXX0000 or revert to old title key style in settings*",
             "Entered \"Author\" is not vaild, Please change and retry","Entered \"Version\" is not vaild, Please change and retry", "Icon is Missing, Please verify a Icon was provided and rety",
             "\"Romfs\" or \"Sdmc\" was not selected, Please select as required and retry" };
-
             for (int x = 0; x < ArrayCheck.Length; x++)
                 if (ArrayCheck[x] == false)
                 { MessageBox.Show(Errors[x]); }
-
             return ArrayCheck.All(a => a);
         }
 
+
+        // Log streamwriter for log.txt
         public static void Logger(string LogInput)
         {
             string logPath = @"./Resources/log.txt";
             using (StreamWriter Logger = new StreamWriter(logPath, true))
-            {
-                Logger.WriteLine(LogInput);
-            }
+            {  Logger.WriteLine(LogInput); }
         }
 
+
+        //Directory content logging
         public static void LsLog()
         {
             foreach (string file in Directory.EnumerateFiles(DircControl.buildpath,
            "*.*",
            SearchOption.AllDirectories))
             {
-                // Display file path.
-                Logger(file);
+                Logger(file); // Display file path.
             }
             Logger("");
         }
 
+
+        //  Increase Title Id after successful build
         public static void IncreaseRollingId()
         {
             string BaseRollingId = Settings.Default["BaseRollingId"].ToString();
             char[] BaseRollingIdCharArray = BaseRollingId.ToCharArray();
-            int x = 15;
+            
             bool Continue = false;
-            do
+            bool OldKeyStyle = Convert.ToBoolean(Settings.Default["OldTitleKeyEnable"]);
+
+            if (OldKeyStyle == true)
             {
-                if (BaseRollingIdCharArray[x] == '9')
+                int x = BaseRollingId.Length - 1;
+                do
                 {
-                    BaseRollingIdCharArray[x] = 'A';
-                    Continue = false;
+                    if (BaseRollingIdCharArray[x] == '9')
+                    {
+                        BaseRollingIdCharArray[x] = 'A';
+                        Continue = false;
+                    }
+                    else if (!(BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
+                    {
+                        BaseRollingIdCharArray[x] = ++BaseRollingIdCharArray[x];
+                        Continue = false;
+                    }
+                    else if ((BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
+                    {
+                        BaseRollingIdCharArray[x] = '0';
+                        Continue = true;
+                        x--;
+                    }
                 }
-                else if (!(BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
-                {
-                    BaseRollingIdCharArray[x] = ++BaseRollingIdCharArray[x];
-                    Continue = false;
-                }
-                else if ((BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
-                {
-                    BaseRollingIdCharArray[x] = '0';
-                    Continue = true;
-                    x--;
-                }
+                while (Continue == true);
             }
-            while (Continue == true);
+            else
+            {
+                int x = BaseRollingId.Length - 5;
+                do
+                {
+                    if (BaseRollingIdCharArray[x] == '9')
+                    {
+                        BaseRollingIdCharArray[x] = 'A';
+                        Continue = false;
+                    }
+                    else if (!(BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
+                    {
+                        BaseRollingIdCharArray[x] = ++BaseRollingIdCharArray[x];
+                        Continue = false;
+                    }
+                    else if ((BaseRollingIdCharArray[x] == 'F' || BaseRollingIdCharArray[x] == 'f'))
+                    {
+                        BaseRollingIdCharArray[x] = '0';
+                        Continue = true;
+                        x--;
+                    }
+                }
+                while (Continue == true) ;
+            }
             Settings.Default["BaseRollingId"] = new string(BaseRollingIdCharArray);
             Settings.Default.Save();
         }
 
+
+        // Title id randomizer
+        public static string RandomizeTitleId()
+        {
+            int length = 10;
+            Random rnd = new Random();
+            string RandomId = "05";
+            bool OldStyleKey = Convert.ToBoolean(Settings.Default["OldTitleKeyEnable"]);
+
+            if (OldStyleKey == true) { length = 14; }
+
+            for (int x = 0; x < length; x++)
+            {
+                int hex = rnd.Next(15);
+                switch (hex)
+                {
+                    case 15:
+                        RandomId += 'F';
+                        break;
+                    case 14:
+                        RandomId += 'E';
+                        break;
+                    case 13:
+                        RandomId += 'D';
+                        break;
+                    case 12:
+                        RandomId += 'C';
+                        break;
+                    case 11:
+                        RandomId += 'B';
+                        break;
+                    case 10:
+                        RandomId += 'A';
+                        break;
+
+                    default:
+                        RandomId += hex;
+                        break;
+                }  
+                }
+            if (OldStyleKey == true) { return RandomId; }
+            else { return RandomId + "0000";  }
+            }
     }
     }
 

@@ -4,6 +4,17 @@ This is an easy to use nsp builder that will make rediction nsps or internally b
 
 >>>>>>> 1da8998d3d8790a08ce6cc07f9e520ff3139f75a
 
+
+Whats New:
+-----------
+v3.2.2
+-- Added: Title Ids changed to 05xxxxxxxxxx0000 format
+-- Fixed: Rolling Id adjusted to new id format
+-- Added: Randomize Title id button added
+-- Added: Auto import .nro icon, app name, author, and version
+-- Fixed: .netframework error certain people were experiancing
+-- Fixed: some settings being set by default
+
 Requirements: 
 -------------
 - Devkitpro for Compiling libnx *newest version* https://switchbrew.org/wiki/Setting_up_Development_Environment
@@ -13,11 +24,13 @@ Requirements:
 
 Special notes:
 --------------
+* To load Meta information from .nro automatically, load the .nro by clicking "romfs" and choose yes.
+  This will automatically load all the information from the .nro. If you want to use sdmc then select "sdmc" after   and use as normal -- may incorperate import button instead if requested
 * Requires Newest Devkitpro update due to changes, update before use
-* Some nros are not working with romfs (newest tinfoil, dOPUS) use sdmc for now
-* Icons no longer need speical size or format
-* Now uses winform, can use mono for mac/linux
-* Mac and linux may experiance bugs or weird issues due to mono
+* Some nros are not working with romfs (old tinfoil, dOPUS) use sdmc for those for now
+* Title ids now follow (05xxxxxxxxxx0000)
+* Mac and linux may experiance bugs or weird issues due to mono 
+  (First launch may take a while to load, be paitent / ui looks less pleasing as well)
 * Big Changes have been made in the code, Bugs maybe be present. If found please report them.
 * Linux use hasnt been tested fully, may experiance issues
 
@@ -32,7 +45,7 @@ Use:
 
      ex: 
      AppName:  TestApp
-     Title Id: 01000F2300000000 *Must be 16 Characters long in hex form and start with 01*    
+     Title Id: 05000F2300000000 *Must be 16 Characters long in hex form and start with 05    
      Made by:  Matt_Teix          	
      Version:  1.0.0
 
@@ -59,6 +72,7 @@ Settings:
 - Preset Author: Set the default author, speed things up if using the same one
 - Rolling Title Id: Set the base Title Id and after each build it'll increase by 1
 - Perserve Data: Saves exefs, contol, and nca data in ./RawData folder
+- Old Style Title Id: Use old style title key format "05XXXXXXXXXXXXXX"
 
 
 Credits: 
@@ -66,17 +80,28 @@ Credits:
          "Switchbrew" for the hblauncher source https://github.com/switchbrew/nx-hbloader
 	 "The-4n" for Hacbrewpack   https://github.com/The-4n/hacBrewPack
 	 "alexzzz9" for the hblauncher source and providing useful help
+	 "jakcron" for Nstool for extracting nro info https://github.com/jakcron/NNTools
 	 The Whole WarezNx Discord for all the tools/information to make all of this possible
 
 Todo:
 -----
--- Clean up new code
+-- fix file permissions for linux/mac to remove sudo command
+-- better intergration for Mac
+-- change the ui (may require some help)
 -- fix certain .nros not working with romfs
--- Maybe include Devkitpro so installing wouldnt be requried
+-- Maybe include Devkitpro so installing wouldnt be requried - if possible
 
 Change log:
 -----------
 
+v3.2.2
+-- Added: Title Ids changed to 05xxxxxxxxxx0000
+-- Fixed: Rolling Id adjusted to new id
+-- Added: Randomize Title id button added
+-- Added: Auto import .nro icon, app name, author, and version
+-- Fixed: .netframework error certain people were experiancing
+-- Fixed: some settings being set by default
+ 
 v3.2.1
 -- fixed issue with newest devkitpro update *now requires latest to build*
 -- added settings tab 

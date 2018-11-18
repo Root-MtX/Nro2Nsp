@@ -139,5 +139,35 @@ namespace MtX.Control.Properties {
                 return ((byte[])(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] nstool {
+            get {
+                object obj = ResourceManager.GetObject("nstool", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] nstool_linux {
+            get {
+                object obj = ResourceManager.GetObject("nstool_linux", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] nstool_mac {
+            get {
+                object obj = ResourceManager.GetObject("nstool_mac", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

@@ -34,3 +34,12 @@ C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Debug\Control.csproj.Gen
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Debug\MtX.Control.dll
 C:\Users\Matts_Surface\source\repos\Nro2Nsp\Control\obj\Debug\MtX.Control.pdb
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\bin\Debug\MtX.Control.dll.config
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\bin\Debug\MtX.Control.dll
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\bin\Debug\MtX.Control.pdb
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Debug\MtX.Control.Properties.Resources.resources
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Debug\Control.csproj.GenerateResource.cache
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Debug\MtX.Control.dll
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Debug\MtX.Control.pdb
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Debug\Control.csprojAssemblyReference.cache

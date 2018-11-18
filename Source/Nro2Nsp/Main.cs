@@ -19,7 +19,7 @@ namespace MtX.Nro2Nsp
         public Nro()
         {
             InitializeComponent();
-            //Clean Working Directory to avoid unawated files during compile 
+           // Clean Working Directory to avoid unawated files during compile 
             if (Directory.Exists(MtX.Control.DircControl.root))
             { MtX.Control.DircControl.CleanTemp(); }
             if (File.Exists(MtX.Control.DircControl.current_directory + @"./Resources/log.txt"))
@@ -27,6 +27,8 @@ namespace MtX.Nro2Nsp
             Reload("Preset Settings:");
         }
 
+
+        // Import Picture and Convert as needed
         private void Import_Pictures(object sender, EventArgs e)
         {
             Stream fileStream = null;
@@ -38,12 +40,12 @@ namespace MtX.Nro2Nsp
             if (icon_dlg.ShowDialog() == DialogResult.OK && (fileStream = icon_dlg.OpenFile()) != null)
             {
                 Icon_Button.BackgroundImage = Properties.Resources._default;
-                Control.IconImport.IconConvert(icon_dlg.FileName);
+                IconImport.IconConvert(icon_dlg.FileName);
                 Icon_Button.BackgroundImage = Image.FromFile(DircControl.buildpath + DircControl.controlpath + @"icon_AmericanEnglish.dat");
             }
         }
 
-
+        //Selection for romfs, sdmc, and meta import
         private void RadioButton_Checked(object sender, EventArgs e)
         {
             if (sdmc_select.Checked == true)
@@ -76,10 +78,47 @@ namespace MtX.Nro2Nsp
                     nropath = romfs_dlg.FileName;
                     nroname = romfs_dlg.SafeFileName;
                     romfs_path.AppendText("/" + nroname);
+                    DialogResult dialogResult = MessageBox.Show("Would you like to import the Icon, App Name, Author, and Version from loaded Nro?", "Import Meta", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {  
+                        ImportMeta.SetRequiredComponents();
+                        if (Tools.RunningPlatform() == Tools.Platform.Windows)
+                        { ImportMeta.ExtractNroWin("/C " + ImportMeta.SetCommand(@romfs_dlg.FileName), false, true); }
+                        else if (Tools.RunningPlatform() == Tools.Platform.Linux || Tools.RunningPlatform() ==  Tools.Platform.Mac)
+                        { ImportMeta.ExtractNroUni(@romfs_dlg.FileName); }
+
+                        for (int x = 0; x < 3; x++)
+                        {
+                            if (x == 0)
+                            {
+                                name_box.Text = ImportMeta.GetMeta(x);
+                                Tools.Logger("Imported Nro AppName: " + ImportMeta.GetMeta(0));
+                            }
+                            if (x == 1)
+                            {
+                                author_box.Text = ImportMeta.GetMeta(x);
+                                Tools.Logger("Imported Nro Author: " + ImportMeta.GetMeta(1));
+                            }
+                            if (x == 2)
+                            {
+                                version_box.Text = ImportMeta.GetMeta(x);
+                                Tools.Logger("Imported Nro Version: " + ImportMeta.GetMeta(2));
+                            }
+                        }
+
+                        ImportMeta.GetIcon();
+                        Icon_Button.BackgroundImage = Image.FromFile(DircControl.buildpath + DircControl.controlpath + @"icon_AmericanEnglish.dat");
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+
+                    }
                 }
             }
         }
 
+
+        // ID text box restiction
         private void Input_restrict(object sender, KeyPressEventArgs e)
         {
             Int32 AllowedLines = 16;
@@ -91,6 +130,8 @@ namespace MtX.Nro2Nsp
             }
         }
 
+
+        // Lets start building evrything 
         private void Compile_button_Click(object sender, EventArgs e)
         {
             Control.DircControl.BuildTemp();
@@ -157,7 +198,6 @@ namespace MtX.Nro2Nsp
                             break;
                     }
                 }
-
                 catch (Exception f)
                 { MessageBox.Show(f.Message); }
 
@@ -166,7 +206,6 @@ namespace MtX.Nro2Nsp
                 w = (PleaseWait)Application.OpenForms["PleaseWait"];
                 w.Invoke(new ThreadStart(delegate { w.Close(); }));
             }
-
             DircControl copy = new DircControl
             {
                 TitleId = id_box.Text,
@@ -178,10 +217,12 @@ namespace MtX.Nro2Nsp
             if (Convert.ToBoolean(Settings.Default["RollingIdEnable"]) == true)
              { Control.Tools.IncreaseRollingId(); }
             if (Directory.Exists(MtX.Control.DircControl.root))
-             { MtX.Control.DircControl.CleanTemp(); }
+            { MtX.Control.DircControl.CleanTemp(); }
             Reload("Post Build:");
         }
 
+
+        // Settings for additional features
         private void SettingsButton_Click(object sender, EventArgs e)
         {
             SettingsMenu SettingsDialog = new SettingsMenu();
@@ -189,6 +230,9 @@ namespace MtX.Nro2Nsp
             Reload("Settings Changed:");
         }
 
+
+
+        // Reload data from setting changes
         public void Reload(String Called)
         {
             Settings.Default.Reload();
@@ -200,11 +244,25 @@ namespace MtX.Nro2Nsp
             Tools.Logger("Rolling Id Enable: " + Convert.ToBoolean(Settings.Default["RollingIdEnable"]));
             Tools.Logger("Rolling Id Value: " + Settings.Default["BaseRollingId"].ToString());
             Tools.Logger("Perserve Data Enable: " + Convert.ToBoolean(Settings.Default["PerserveDataEnable"]));
+            Tools.Logger("Old Style Title Key Enable: " + Convert.ToBoolean(Settings.Default["OldTitleKeyEnable"]));
 
             if (Convert.ToBoolean(Settings.Default["RollingIdEnable"]) == true)
             { id_box.Text = Settings.Default["BaseRollingId"].ToString(); }
             if (Convert.ToBoolean(Settings.Default["SetAuthorEnable"]) == true)
             { author_box.Text = Settings.Default["SetAuthor"].ToString(); }
+        }
+
+
+        //Button for randomizing the title id
+        private void Randomize_Click(object sender, EventArgs e)
+        {
+            bool RollingId = Convert.ToBoolean(Settings.Default["RollingIdEnable"]);
+            if (RollingId == false)
+            {
+               id_box.Text = Control.Tools.RandomizeTitleId();
+            }
+            else
+            { MessageBox.Show("Disable \"Rolling Title Id\" in settings to use randomize feature"); }
         }
     }
 

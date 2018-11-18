@@ -22,6 +22,8 @@ namespace MtX.Control
                              logopath = @"logo/",
                              RootDrive = System.IO.Path.GetPathRoot(Environment.CurrentDirectory);
 
+
+        //Build working dirc
         public static void BuildTemp()
         {
             try
@@ -66,6 +68,8 @@ namespace MtX.Control
             { MessageBox.Show(e.Message + " -- File copying failed, make sure the file missing is int the \"Resources\" next to the Application"); }
         }
 
+
+        //Clean Working Directory
         public static void CleanTemp()
         {
             try
@@ -77,6 +81,8 @@ namespace MtX.Control
             catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
+
+        //Clean Log at start
         public static void CleanLog()
         {
             try
@@ -88,6 +94,8 @@ namespace MtX.Control
             catch (Exception e) { MessageBox.Show(e.Message); }
         }
 
+
+        //Copy completed nsp to working dirc
         public void OutputCopy()
         { 
             string nspsource = @buildpath;
@@ -113,6 +121,8 @@ namespace MtX.Control
             { MessageBox.Show(e.Message + System.Environment.NewLine + "It appears building the nsp failed, please verify the proper keys are in keys.dat file -- refer to Keys.dat template.txt");}
         }
 
+
+        //Save data if set
         void PerseveCopy(string sourceDir, string targetDir)
         {
             Directory.CreateDirectory(targetDir);

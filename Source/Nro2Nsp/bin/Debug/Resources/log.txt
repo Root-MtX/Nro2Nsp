@@ -1,253 +1,135 @@
-App Name = App Name1
-Title Id = 01000A0000000001
-Author = Author1
-Version =  1.0.0
-Line = sdmc:
-SdmcPath = /hbmenu.nro
-RomfsPath = /application.nro
-NroName = 
-NroPath = 
-
-C:\/Nro2Nsp/temp/app.json
-C:\/Nro2Nsp/temp/hacbrewpack.exe
-C:\/Nro2Nsp/temp/keys.dat
-C:\/Nro2Nsp/temp/makefile
-C:\/Nro2Nsp/temp/control\control.nacp
-C:\/Nro2Nsp/temp/control\icon_AmericanEnglish.dat
-C:\/Nro2Nsp/temp/logo\NintendoLogo.png
-C:\/Nro2Nsp/temp/logo\StartupMovie.gif
-C:\/Nro2Nsp/temp/romfs\main.nro
-C:\/Nro2Nsp/temp/source\main.c
-C:\/Nro2Nsp/temp/source\trampoline.s
-
-make: Entering directory '/c/Nro2Nsp/temp'
-main.c
-aarch64-none-elf-gcc -MMD -MP -MF /c/Nro2Nsp/temp/build/main.d -g -W -O2 -s -ffunction-sections -march=armv8-a -mtune=cortex-a57 -mtp=soft -fPIE  -I/c/Nro2Nsp/temp/include -I/opt/devkitpro/portlibs/switch/include -I/opt/devkitpro/libnx/include -I/c/Nro2Nsp/temp/build -D__SWITCH__ -DVERSION='"1.0.0"' -DTITLE='"App Name1"' -c /c/Nro2Nsp/temp/source/main.c -o main.o 
-trampoline.s
-aarch64-none-elf-gcc -MMD -MP -MF /c/Nro2Nsp/temp/build/trampoline.d -x assembler-with-cpp -g -march=armv8-a -mtune=cortex-a57 -mtp=soft -fPIE -c /c/Nro2Nsp/temp/source/trampoline.s -o trampoline.o 
-linking nro2nsp.elf
-built ... nro2nsp.nso
-built ... nro2nsp.npdm
-built ... nro2nsp.pfs0
-built ... nro2nsp.nacp
-built ... nro2nsp.nro
-make: Leaving directory '/c/Nro2Nsp/temp'
-
-
-hacBrewPack v1.18 by The-4n
-
-Removing existing temp and nca directories
-Creating temp, nca and nsp directories
-
-----> Processing NACP
-Validating Title Name
-Validating Author
-Getting TitleID
-Validating TitleID
-Changing logo handeling to auto
-
-----> Creating Program NCA:
-===> Creating NCA header
-Writing NCA header placeholder to C:\/Nro2Nsp/temp/nca\program.nca
-
----> Creating Section 0:
-===> Building ExeFS
-Writing C:\/Nro2Nsp/temp/build/exefs\main to C:\/Nro2Nsp/temp/raw\program_sec0_exefs
-Writing C:\/Nro2Nsp/temp/build/exefs\main.npdm to C:\/Nro2Nsp/temp/raw\program_sec0_exefs
-Calculating hash table
-
-===> Writing ExeFS
-Writing PFS0 hash table
-Writing PFS0
-
-===> Calculating Hashes:
-Calculating Master hash
-Calculating Section hash
-
----> Creating Section 1:
-===> Building RomFS
-Visiting directories
-Calculating metadata
-Writing C:\/Nro2Nsp/temp/romfs/\main.nro to C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl6
-
-===> Creating IVFC levels
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl5
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl4
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl3
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl2
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl1
-
-===> Writing IVFC levels
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl1 to C:\/Nro2Nsp/temp/nca\program.nca
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl2 to C:\/Nro2Nsp/temp/nca\program.nca
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl3 to C:\/Nro2Nsp/temp/nca\program.nca
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl4 to C:\/Nro2Nsp/temp/nca\program.nca
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl5 to C:\/Nro2Nsp/temp/nca\program.nca
-Writing C:\/Nro2Nsp/temp/raw\program_sec1_ivfc_lvl6 to C:\/Nro2Nsp/temp/nca\program.nca
-
-===> Calculating Hashes:
-Calculating Master hash
-Calculating Section hash
-
----> Creating Section 2:
-===> Building PFS0
-Writing C:\/Nro2Nsp/temp/logo/\NintendoLogo.png to C:\/Nro2Nsp/temp/raw\program_sec2_logo
-Writing C:\/Nro2Nsp/temp/logo/\StartupMovie.gif to C:\/Nro2Nsp/temp/raw\program_sec2_logo
-Calculating hash table
-
-===> Writing IVFC levels
-Writing PFS0 hash table
-Writing PFS0
-
-===> Calculating Hashes:
-Calculating Master hash
-Calculating Section hash
-
----> Finalizing:
-===> Encrypting NCA
-Encrypting section 0
-Encrypting section 1
-Getting NCA file size
-Encrypting key area
-Encrypting header
-
-===> Writing NCA header
-Writing NCA header to C:\/Nro2Nsp/temp/nca\program.nca
-
-===> Post creation process
-Calculating NCA hash
-Renaming program.nca to d814f984a3597fca0ef9cbe9a7d2b055.nca
-
-----> Created Program NCA: C:\/Nro2Nsp/temp/nca\d814f984a3597fca0ef9cbe9a7d2b055.nca
-
-----> Creating Control NCA:
-===> Creating NCA header
-Writing NCA header placeholder to C:\/Nro2Nsp/temp/nca\control.nca
-
----> Creating Section 0:
-===> Building RomFS
-Visiting directories
-Calculating metadata
-Writing C:\/Nro2Nsp/temp/control/\control.nacp to C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl6
-Writing C:\/Nro2Nsp/temp/control/\icon_AmericanEnglish.dat to C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl6
-
-===> Creating IVFC levels
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl5
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl4
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl3
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl2
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl1
-
-===> Writing IVFC levels
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl1 to C:\/Nro2Nsp/temp/nca\control.nca
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl2 to C:\/Nro2Nsp/temp/nca\control.nca
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl3 to C:\/Nro2Nsp/temp/nca\control.nca
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl4 to C:\/Nro2Nsp/temp/nca\control.nca
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl5 to C:\/Nro2Nsp/temp/nca\control.nca
-Writing C:\/Nro2Nsp/temp/raw\control_sec0_ivfc_lvl6 to C:\/Nro2Nsp/temp/nca\control.nca
-
-===> Calculating Hashes:
-Calculating Master hash
-Calculating Section hash
-
----> Finalizing:
-===> Encrypting NCA
-Encrypting section 0
-Getting NCA file size
-Encrypting key area
-Encrypting header
-
-===> Writing NCA header
-Writing NCA header to C:\/Nro2Nsp/temp/nca\control.nca
-
-===> Post creation process
-Calculating NCA hash
-Renaming control.nca to e5dfbe29aaf2a92f978c4faf74a8b667.nca
-
-----> Created Control NCA: C:\/Nro2Nsp/temp/nca\e5dfbe29aaf2a92f978c4faf74a8b667.nca
-
-----> Creating Metadata NCA:
-===> Creating NCA header
-Writing NCA header placeholder to C:\/Nro2Nsp/temp/nca\meta.nca
-
-===> Creating Metadata file
-Writing metadata header
-Writing content records
-
-===> Building PFS0
-Writing C:\/Nro2Nsp/temp/raw\cnmt\Application_01000a0000000001.cnmt to C:\/Nro2Nsp/temp/raw\meta_sec0_pfs0
-Calculating hash table
-
-===> Writing PFS0 section
-Writing PFS0 hash table
-Writing PFS0
-
-===> Calculating Hashes:
-Calculating Master hash
-Calculating Section hash
-
----> Finalizing:
-===> Encrypting NCA
-Encrypting section 0
-Getting NCA file size
-Encrypting key area
-Encrypting header
-
-===> Writing NCA header
-Writing NCA header to C:\/Nro2Nsp/temp/nca\meta.nca
-
-===> Post creation process
-Calculating NCA hash
-Renaming meta.nca to 1a5e8604b82e78458d70d72a58cf3d52.cnmt.nca
-
-----> Created Metadata NCA: C:\/Nro2Nsp/temp/nca\1a5e8604b82e78458d70d72a58cf3d52.cnmt.nca
-
-----> Creating NSP:
-Writing C:\/Nro2Nsp/temp/nca\1a5e8604b82e78458d70d72a58cf3d52.cnmt.nca to C:\/Nro2Nsp/temp/\01000a0000000001.nsp
-Writing C:\/Nro2Nsp/temp/nca\d814f984a3597fca0ef9cbe9a7d2b055.nca to C:\/Nro2Nsp/temp/\01000a0000000001.nsp
-Writing C:\/Nro2Nsp/temp/nca\e5dfbe29aaf2a92f978c4faf74a8b667.nca to C:\/Nro2Nsp/temp/\01000a0000000001.nsp
-
-----> Created NSP: C:\/Nro2Nsp/temp/\01000a0000000001.nsp
-
-Removing created temp and nca directories
+Preset Settings:
+Custom Devkit Enable: False
+Custom Devkit Path: 
+Preset Author Enable: False
+Preset Authot Value: 
+Rolling Id Enable: False
+Rolling Id Value: 
+Perserve Data Enable: False
+Old Style Title Key Enable: False
+Settings Changed:
+Custom Devkit Enable: False
+Custom Devkit Path: 
+Preset Author Enable: False
+Preset Authot Value: 
+Rolling Id Enable: False
+Rolling Id Value: 
+Perserve Data Enable: False
+Old Style Title Key Enable: False
+[NRO Header]
+  RoCrt:       2000001414010000
+  ModuleId:    890fcdf6b5f6e3bed7162772395a6189229074b8000000000000000000000000
+  NroSize:     0xa67000
+  Program Sections:
+     .text:
+      Offset:     0x0
+      Size:       0x748000
+    .ro:
+      Offset:     0x748000
+      Size:       0x2a7000
+    .data:
+      Offset:     0x9ef000
+      Size:       0x78000
+    .bss:
+      Size:       0xe3000
+[ApplicationControlProperty]
+  Menu Description:
+    DisplayVersion:               0.95
+    AmericanEnglish Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    BritishEnglish Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    Japanese Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    French Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    German Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    LatinAmericanSpanish Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    Spanish Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    Italian Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    Dutch Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    CanadianFrench Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    Portuguese Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+    Russian Title:
+      Name:                       Tinfoil
+      Publisher:                  Digable, Inc.
+  Logo:
+    Type:                         Nintendo
+    Handling:                     None
+  AddOnContent:
+    BaseId:                       0x0000000000000000
+    RegistrationType:             AllOnLaunch
+    RuntimeInstallMode:           Deny
+  Play Log:
+    PlayLogPolicy:                All
+    PlayLogQueryCapability:       None
+  Parental Controls:
+    ParentalControlFlag:          None
+    Age Restriction:
+      Agency:  CERO
+      Age:     12
+    Age Restriction:
+      Agency:  ESRB
+      Age:     10
+    Age Restriction:
+      Agency:  USK
+      Age:     12
+    Age Restriction:
+      Agency:  PEGI
+      Age:     12
+    Age Restriction:
+      Agency:  PEGIPortugal
+      Age:     12
+    Age Restriction:
+      Agency:  PEGIBBFC
+      Age:     12
+    Age Restriction:
+      Agency:  Russian
+      Age:     12
+    Age Restriction:
+      Agency:  ACB
+      Age:     13
+    Age Restriction:
+      Agency:  OFLC
+      Age:     13
+  SaveData:
+    SaveDatawOwnerId:             0x0000000000000000
+    UserAccountSaveData:
+      Size:                       62 MB
+      JournalSize:                1 MB
+  Other Flags:
+    StartupUserAccount:           Required
+    AttributeFlag:                None
+    CrashReportMode:              Deny
+    HDCP:                         None
+    ScreenshotMode:               Allow
+    VideoCaptureMode:             Disable
+    DataLossConfirmation:         Required
+    RepairFlag:                   None
+    ProgramIndex:                 0x00
+[RomFS]
+  DirNum:     0
+  FileNum:    0
 
 
-Summary:
-
-Title ID: 01000a0000000001
-SDK Version: 0.12.17.0
-Section Crypto Type: Regular Crypto
-Keygeneration: 1
-Key area key 2: 04040404040404040404040404040404
-Program NCA RomFS Section: Yes
-Program NCA Logo Section: Yes
-Created NSP: C:\/Nro2Nsp/temp/\01000a0000000001.nsp
-
-
-C:\/Nro2Nsp/temp/01000a0000000001.nsp
-C:\/Nro2Nsp/temp/app.json
-C:\/Nro2Nsp/temp/hacbrewpack.exe
-C:\/Nro2Nsp/temp/keys.dat
-C:\/Nro2Nsp/temp/makefile
-C:\/Nro2Nsp/temp/nro2nsp.elf
-C:\/Nro2Nsp/temp/nro2nsp.nacp
-C:\/Nro2Nsp/temp/nro2nsp.npdm
-C:\/Nro2Nsp/temp/nro2nsp.nro
-C:\/Nro2Nsp/temp/nro2nsp.nso
-C:\/Nro2Nsp/temp/nro2nsp.pfs0
-C:\/Nro2Nsp/temp/build\main.d
-C:\/Nro2Nsp/temp/build\main.o
-C:\/Nro2Nsp/temp/build\nro2nsp.lst
-C:\/Nro2Nsp/temp/build\nro2nsp.map
-C:\/Nro2Nsp/temp/build\trampoline.d
-C:\/Nro2Nsp/temp/build\trampoline.o
-C:\/Nro2Nsp/temp/build\exefs\main
-C:\/Nro2Nsp/temp/build\exefs\main.npdm
-C:\/Nro2Nsp/temp/control\control.nacp
-C:\/Nro2Nsp/temp/control\icon_AmericanEnglish.dat
-C:\/Nro2Nsp/temp/logo\NintendoLogo.png
-C:\/Nro2Nsp/temp/logo\StartupMovie.gif
-C:\/Nro2Nsp/temp/romfs\main.nro
-C:\/Nro2Nsp/temp/source\main.c
-C:\/Nro2Nsp/temp/source\trampoline.s
-
+Imported Nro AppName: Tinfoil
+Imported Nro Author: Digable, Inc.
+Imported Nro Version: 0.95

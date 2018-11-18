@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Import.cs" />
     <Compile Include="Image.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -78,12 +79,17 @@
     <None Include="Resources\lind.asc" />
     <None Include="Resources\mct.asc" />
     <None Include="Resources\mkf.asc" />
+    <None Include="Resources\nstool_linux" />
+    <None Include="Resources\nstool_mac" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hacbrewpackx64.exe" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hacbrewpackx86.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nstool.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

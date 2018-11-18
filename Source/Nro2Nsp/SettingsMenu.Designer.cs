@@ -41,6 +41,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SettingSaveButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.OldKeyBox = new System.Windows.Forms.TextBox();
+            this.OldKeyCheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // CustomDevClick
@@ -177,7 +180,7 @@
             // SettingSaveButton
             // 
             this.SettingSaveButton.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.SettingSaveButton.Location = new System.Drawing.Point(210, 235);
+            this.SettingSaveButton.Location = new System.Drawing.Point(211, 261);
             this.SettingSaveButton.Name = "SettingSaveButton";
             this.SettingSaveButton.Size = new System.Drawing.Size(75, 27);
             this.SettingSaveButton.TabIndex = 12;
@@ -185,12 +188,47 @@
             this.SettingSaveButton.UseVisualStyleBackColor = true;
             this.SettingSaveButton.Click += new System.EventHandler(this.SettingSaveButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(46, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Old T-Key Format";
+            // 
+            // OldKeyBox
+            // 
+            this.OldKeyBox.Enabled = false;
+            this.OldKeyBox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic);
+            this.OldKeyBox.Location = new System.Drawing.Point(211, 213);
+            this.OldKeyBox.Name = "OldKeyBox";
+            this.OldKeyBox.Size = new System.Drawing.Size(255, 25);
+            this.OldKeyBox.TabIndex = 14;
+            this.OldKeyBox.Text = "Old Style T-Key 05XXXXXXXXXXXXXXXX";
+            this.OldKeyBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OldKeyCheck
+            // 
+            this.OldKeyCheck.AutoSize = true;
+            this.OldKeyCheck.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.OldKeyCheck.Location = new System.Drawing.Point(179, 219);
+            this.OldKeyCheck.Name = "OldKeyCheck";
+            this.OldKeyCheck.Size = new System.Drawing.Size(15, 14);
+            this.OldKeyCheck.TabIndex = 13;
+            this.OldKeyCheck.UseVisualStyleBackColor = true;
+            this.OldKeyCheck.CheckedChanged += new System.EventHandler(this.OldKeyClick_Checked);
+            // 
             // SettingsMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(495, 280);
+            this.ClientSize = new System.Drawing.Size(495, 300);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.OldKeyBox);
+            this.Controls.Add(this.OldKeyCheck);
             this.Controls.Add(this.SettingSaveButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -226,5 +264,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SettingSaveButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox OldKeyBox;
+        private System.Windows.Forms.CheckBox OldKeyCheck;
     }
 }

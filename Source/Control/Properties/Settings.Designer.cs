@@ -37,7 +37,7 @@ namespace MtX.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool SetAuthorEnable {
             get {
                 return ((bool)(this["SetAuthorEnable"]));
@@ -49,7 +49,7 @@ namespace MtX.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool RollingIdEnable {
             get {
                 return ((bool)(this["RollingIdEnable"]));
@@ -61,7 +61,7 @@ namespace MtX.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool PerserveDataEnable {
             get {
                 return ((bool)(this["PerserveDataEnable"]));
@@ -73,7 +73,7 @@ namespace MtX.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("null")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string CustomDevkitPath {
             get {
                 return ((string)(this["CustomDevkitPath"]));
@@ -85,7 +85,7 @@ namespace MtX.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("null")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string SetAuthor {
             get {
                 return ((string)(this["SetAuthor"]));
@@ -97,13 +97,25 @@ namespace MtX.Control.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("null")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string BaseRollingId {
             get {
                 return ((string)(this["BaseRollingId"]));
             }
             set {
                 this["BaseRollingId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool OldTitleKeyEnable {
+            get {
+                return ((bool)(this["OldTitleKeyEnable"]));
+            }
+            set {
+                this["OldTitleKeyEnable"] = value;
             }
         }
     }

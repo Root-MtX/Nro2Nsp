@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.Icon_Button = new System.Windows.Forms.Button();
+            this.Randomize = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // compile_button
@@ -108,7 +109,7 @@
             this.id_box.Name = "id_box";
             this.id_box.Size = new System.Drawing.Size(132, 25);
             this.id_box.TabIndex = 5;
-            this.id_box.Text = "01000A0000000000";
+            this.id_box.Text = "05000A0000000000";
             this.id_box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Input_restrict);
             // 
             // author_box
@@ -216,11 +217,23 @@
             this.Icon_Button.UseVisualStyleBackColor = false;
             this.Icon_Button.Click += new System.EventHandler(this.Import_Pictures);
             // 
+            // Randomize
+            // 
+            this.Randomize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Randomize.BackgroundImage")));
+            this.Randomize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Randomize.Location = new System.Drawing.Point(274, 94);
+            this.Randomize.Name = "Randomize";
+            this.Randomize.Size = new System.Drawing.Size(29, 25);
+            this.Randomize.TabIndex = 15;
+            this.Randomize.UseVisualStyleBackColor = true;
+            this.Randomize.Click += new System.EventHandler(this.Randomize_Click);
+            // 
             // Nro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(513, 389);
+            this.Controls.Add(this.Randomize);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -238,7 +251,7 @@
             this.Controls.Add(this.compile_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Nro";
-            this.Text = "Nro2Nsp Version 3.2.1 -- MtX ";
+            this.Text = "Nro2Nsp Version 3.2.2 -- MtX ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +275,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SettingsButton;
+        private System.Windows.Forms.Button Randomize;
     }
 }
 

@@ -121,9 +121,6 @@
   <data name="hacbrewpack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hacbrewpack;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="hacbrewpackx64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hacbrewpackx64.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="hacbrewpackx86" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hacbrewpackx86.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -141,5 +138,17 @@
   </data>
   <data name="hacbrewpack_mac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hacbrewpack_mac;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="hacbrewpackx64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hacbrewpackx64.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nstool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nstool.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nstool_linux" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nstool_linux;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="nstool_mac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nstool_mac;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

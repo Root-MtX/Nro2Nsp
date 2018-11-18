@@ -8,6 +8,7 @@ using System.Text;
 
 namespace MtX.Control
 {
+    // Makes .nacp from entered information
     public class Nacp
     {
         public string AppName { get; set; }
