@@ -22,3 +22,4 @@ C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Release\Control.
 C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Release\Control.csproj.CoreCompileInputs.cache
 C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Release\MtX.Control.dll
 C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Release\MtX.Control.pdb
+C:\Users\Owner\Desktop\GitHub\Switch\Nro2Nsp\Source\Control\obj\Release\Control.csprojAssemblyReference.cache

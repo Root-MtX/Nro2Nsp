@@ -25,7 +25,7 @@ namespace MtX.Control
             long[] patch_id =   { 0x3038, 0x3070, 0x3078, 0x30b0, 0x30b8, 0x30f8 };
 
             byte[] name_bytes = Encoding.ASCII.GetBytes(AppName);
-            byte[] author_bytes = Encoding.ASCII.GetBytes(Author + " (MtX)");
+            byte[] author_bytes = Encoding.ASCII.GetBytes(Author);
             byte[] version_bytes = Encoding.ASCII.GetBytes(Version);
             List<byte> fill0 = new List<byte>();
             List<byte> fillf = new List<byte>();
