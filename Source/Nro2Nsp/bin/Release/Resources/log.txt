@@ -1,12 +1,12 @@
 App Name = Tinfoil
 Title Id = 0500FF3000000000
 Author = Digable, Inc.
-Version = 0.95
+Version = 0.99
 Line = sdmc:
 SdmcPath = /switch/dz/dz.nro
 RomfsPath = /application.nro
 NroName = dz.nro
-NroPath = C:\Users\Owner\Downloads\dz.nro
+NroPath = C:\Users\Matts_Surface\Downloads\dz.nro
 
 C:\/Nro2Nsp/temp/app.json
 C:\/Nro2Nsp/temp/hacbrewpack.exe
@@ -119,9 +119,9 @@ Writing NCA header to C:\/Nro2Nsp/temp/nca\program.nca
 
 ===> Post creation process
 Calculating NCA hash
-Renaming program.nca to 61033ecb328e2e1a02a1f9a228aed434.nca
+Renaming program.nca to 7f9ff1102ab4f9db2dcb975f365adae7.nca
 
-----> Created Program NCA: C:\/Nro2Nsp/temp/nca\61033ecb328e2e1a02a1f9a228aed434.nca
+----> Created Program NCA: C:\/Nro2Nsp/temp/nca\7f9ff1102ab4f9db2dcb975f365adae7.nca
 
 ----> Creating Control NCA:
 ===> Creating NCA header
@@ -165,9 +165,9 @@ Writing NCA header to C:\/Nro2Nsp/temp/nca\control.nca
 
 ===> Post creation process
 Calculating NCA hash
-Renaming control.nca to 3c394c7b187e92a21fc4316e2de3b481.nca
+Renaming control.nca to f37dba0ce0d61a331a981254961d0d9f.nca
 
-----> Created Control NCA: C:\/Nro2Nsp/temp/nca\3c394c7b187e92a21fc4316e2de3b481.nca
+----> Created Control NCA: C:\/Nro2Nsp/temp/nca\f37dba0ce0d61a331a981254961d0d9f.nca
 
 ----> Creating Metadata NCA:
 ===> Creating NCA header
@@ -201,14 +201,14 @@ Writing NCA header to C:\/Nro2Nsp/temp/nca\meta.nca
 
 ===> Post creation process
 Calculating NCA hash
-Renaming meta.nca to 7eccfe7a4f1a9da0755debf520d55637.cnmt.nca
+Renaming meta.nca to c2f5a9b6c76a566865908505f673f0e6.cnmt.nca
 
-----> Created Metadata NCA: C:\/Nro2Nsp/temp/nca\7eccfe7a4f1a9da0755debf520d55637.cnmt.nca
+----> Created Metadata NCA: C:\/Nro2Nsp/temp/nca\c2f5a9b6c76a566865908505f673f0e6.cnmt.nca
 
 ----> Creating NSP:
-Writing C:\/Nro2Nsp/temp/nca\3c394c7b187e92a21fc4316e2de3b481.nca to C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
-Writing C:\/Nro2Nsp/temp/nca\61033ecb328e2e1a02a1f9a228aed434.nca to C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
-Writing C:\/Nro2Nsp/temp/nca\7eccfe7a4f1a9da0755debf520d55637.cnmt.nca to C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
+Writing C:\/Nro2Nsp/temp/nca\7f9ff1102ab4f9db2dcb975f365adae7.nca to C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
+Writing C:\/Nro2Nsp/temp/nca\c2f5a9b6c76a566865908505f673f0e6.cnmt.nca to C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
+Writing C:\/Nro2Nsp/temp/nca\f37dba0ce0d61a331a981254961d0d9f.nca to C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
 
 ----> Created NSP: C:\/Nro2Nsp/temp/\0500ff3000000000.nsp
 
@@ -253,9 +253,9 @@ C:\/Nro2Nsp/temp/Extract\Control.nacp
 C:\/Nro2Nsp/temp/Extract\Icon.jpg
 C:\/Nro2Nsp/temp/logo\NintendoLogo.png
 C:\/Nro2Nsp/temp/logo\StartupMovie.gif
-C:\/Nro2Nsp/temp/nca\3c394c7b187e92a21fc4316e2de3b481.nca
-C:\/Nro2Nsp/temp/nca\61033ecb328e2e1a02a1f9a228aed434.nca
-C:\/Nro2Nsp/temp/nca\7eccfe7a4f1a9da0755debf520d55637.cnmt.nca
+C:\/Nro2Nsp/temp/nca\7f9ff1102ab4f9db2dcb975f365adae7.nca
+C:\/Nro2Nsp/temp/nca\c2f5a9b6c76a566865908505f673f0e6.cnmt.nca
+C:\/Nro2Nsp/temp/nca\f37dba0ce0d61a331a981254961d0d9f.nca
 C:\/Nro2Nsp/temp/romfs\main.nro
 C:\/Nro2Nsp/temp/source\main.c
 C:\/Nro2Nsp/temp/source\trampoline.s
@@ -265,7 +265,7 @@ Custom Devkit Enable: False
 Custom Devkit Path: 
 Preset Author Enable: False
 Preset Authot Value: 
-Rolling Id Enable: True
-Rolling Id Value: 0500FF3000010000
+Rolling Id Enable: False
+Rolling Id Value: 
 Perserve Data Enable: False
 Old Style Title Key Enable: False
