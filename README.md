@@ -18,7 +18,10 @@ v3.3.0
 - Fixed directory cleaning
 - Fixed special characters displaying as (?) -- Limtied to Switchs Character Library
 - Fixed crash if icon was set and then an icon was loaded from a .nro
+- Will only clear the icon if build is successful
+- Fixed rolling id would count when build failed
 - Custom error handling, no more crashes for incorrect paths (Nothing fancy but you shouldnt normally see this)
+
 <p align="center"> 
 <img src="https://github.com/Root-MtX/Nro2Nsp/blob/master/Images/errorOutput.jpg">
 </p>
