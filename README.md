@@ -1,31 +1,30 @@
+# This is an easy to use nsp builder that will make rediction nsps or Retroarch Forwarders out of nros.
 
-This is an easy to use nsp builder that will make rediction nsps or internally built nsps out of nros
-
-
-
-Whats New:
+## Whats New:
 -----------
-v3.2.2
-- Added: Title Ids changed to 05xxxxxxxxxx0000 format
-- Fixed: Rolling Id adjusted to new id format
-- Added: Randomize Title id button added
-- Added: Auto import .nro icon, app name, author, and version
-- Fixed: .netframework error certain people were experiancing
-- Fixed: some settings being set by default
-- Fixed: Removed (MtX) tag from Author
+v3.3.0
+- Fixed lockup when selecting (+) on forwarder nro when loaded in the background
+- Devkitpro no longer needed (Thanks Natinusala)
+- Retroarch rom forwarder now supported (Thanks Natinusala)
+- Tweaks to NACP and NPDM building
+- Added core database (./Resources/cores.xml)
+- Added rom path databasee (./Resources/pahts.xml)
+- Fixed directory cleaning
+- Custom error handling, no more crashes for incorrect paths
+- Fixed special characters displaying (?) *Limtied to Switchs Character Library*
+- Fixed Crash if icon was set and then an icon was loaded from a .nro
 
-Requirements: 
+
+## Requirements: 
 -------------
-- Devkitpro for Compiling libnx *newest version* https://switchbrew.org/wiki/Setting_up_Development_Environment
-- Keys.dat file added to the "Resources" folder -- refer to "keys.dat template" for layout and required keys
+- Keys.dat file added to the "Resources" folder -- refer to "keys.dat template for layout and required keys
 - .NetFramework for win https://www.microsoft.com/en-ca/download/details.aspx?id=49981
 - Mono for Mac or Linux https://www.mono-project.com/
 
-Special notes:
+## Special notes:
 --------------
 * To load Meta information from .nro automatically, load the .nro by clicking "romfs" and choose yes.
   This will automatically load all the information from the .nro. If you want to use sdmc then select "sdmc" after   and use as normal -- may incorperate import button instead if requested
-* Requires Newest Devkitpro update due to changes, update before use
 * Some nros are not working with romfs (old tinfoil, dOPUS) use sdmc for those for now
 * Title ids now follow (05xxxxxxxxxx0000)
 * Mac and linux may experiance bugs or weird issues due to mono 
@@ -33,24 +32,23 @@ Special notes:
 * Big Changes have been made in the code, Bugs maybe be present. If found please report them.
 * Linux use hasnt been tested fully, may experiance issues
 
-Use:
+## How to run:
 ----
-- Windows
-----------
+# Windows 
 - Run Nro2Nsp.exe
 
-- Mac/Linux 
-------------
-
+# Mac/Linux 
 - open terminal.app
 - cd to folder ex: cd Desktop/Nro2Nsp
-- run "sudo mono --arch=32 ./Nro2Nsp.exe
+- run "sudo mono --arch=32 ./Nro2Nsp.exe *linux doesnt support/require --arch=32 according to reports*
+
+## Standard Nro Forwarder
 
 - Add you nsp details 
 
      ex: 
      AppName:  TestApp
-     Title Id: 05000F2300000000 *Must be 16 Characters long in hex form and start with 05    
+     Title Id: 05000F2300000000 *Must be 16 Characters long in hex form and start with 05*    
      Made by:  Matt_Teix          	
      Version:  1.0.0
 
@@ -67,114 +65,86 @@ Use:
   ex: 
   romfs: /tinfoil.nro 
 
+
+## Retroarch Rom Forwarder 
+
+Add you nsp details 
+
+     ex: 
+     AppName:  Super Mario World
+     Title Id: 05000F2300000000 *Must be 16 Characters long in hex form and start with 05    
+     Made by:  Retroarch          	
+     Version:  1.0.0
+
+Core Path: Path to the core to load for the rom ex. sdmc:  /retroarch/cores/snes9x_libretro_libnx.nro
+Rom Path: Path to the Rom to load  ex. sdmc:  /Roms/Snes/Super Mario World.smc
+
+
 - Click the compile Button
 - Wait for compiling to finsh
 - Your .Nsp should be good to go!
 
-Settings:
+
+## XML Editing:
+------------
+
+# Cores.xml - Preset core list for retorarch with paths
+- layout ex 
+<details>
+ <core>
+  <name>Nintendo - Quicknes</name> 
+   <path>/retroarch/cores/quicknes_libretro_libnx.nro</path>
+ </core>
+<core> 
+  <name>Super Nintendo - Snex9x</name> 
+  <path>/retroarch/cores/snes9x_libretro_libnx.nro</path> 
+  <show>true</show>
+ </core>
+</details>
+
+- Name: Name of core
+- Path: Path to the core
+- show: If set to anything but true it will be hidden
+
+# paths.xml - Preset core list for retorarch with paths set
+- layout ex 
+
+<details>
+ <system>
+  <name>Nintendo 64</name> 
+  <path>/roms/N64/</path>
+  <show>true</show>
+ </system>
+ <system>
+   <name>Nintendo 64</name> 
+   <path>/roms/N64/</path>
+   <show>true</show>
+ </system>
+</details>
+
+- Name: Name of the System
+- Path: Path to the rom directory per system
+- show: If set to anything but true it will be hidden
+
+## Settings:
 ---------
-- Custom Devkitpro Path: Set the path to your devkitpro path if installed in different locations than default
 - Preset Author: Set the default author, speed things up if using the same one
 - Rolling Title Id: Set the base Title Id and after each build it'll increase by 1
 - Perserve Data: Saves exefs, contol, and nca data in ./RawData folder
 - Old Style Title Id: Use old style title key format "05XXXXXXXXXXXXXX"
 
-
-Credits: 
+## Credits: 
 --------
+	 "Natinusala" for differnt approach of hbl to work with Retroarch/forwarders
          "Switchbrew" for the hblauncher source https://github.com/switchbrew/nx-hbloader
 	 "The-4n" for Hacbrewpack   https://github.com/The-4n/hacBrewPack
 	 "alexzzz9" for the hblauncher source and providing useful help
 	 "jakcron" for Nstool for extracting nro info https://github.com/jakcron/NNTools
 	 The Whole WarezNx Discord for all the tools/information to make all of this possible
 
-Todo:
+## Todo:
 -----
 -- fix file permissions for linux/mac to remove sudo command
 -- better intergration for Mac
 -- change the ui (may require some help)
 -- fix certain .nros not working with romfs
--- Maybe include Devkitpro so installing wouldnt be requried - if possible
-
-Change log:
------------
-
-v3.2.2
--- Added: Title Ids changed to 05xxxxxxxxxx0000
--- Fixed: Rolling Id adjusted to new id
--- Added: Randomize Title id button added
--- Added: Auto import .nro icon, app name, author, and version
--- Fixed: .netframework error certain people were experiancing
--- Fixed: some settings being set by default
--- Fixed: Removed (MtX) tag from Author
- 
-v3.2.1
--- fixed issue with newest devkitpro update *now requires latest to build*
--- added settings tab 
--- fixed makefile naming for linux
--- fixed dekitpro location error if running app from remote drive
--- added rolling title id 
--- added preset author
--- added custom devkitpto
--- added perserve data
-
-
-v3.2
--- Rewrote code for better structure
--- uses winforms now and compatable with mono for multiplatform support
--- rebuilt resources data into .dll library
--- Added more checks and error reports
--- Added log.txt in "Resources" for trobuleshooting
--- added building message (only functional on win)
--- removed linkle and added in app control.nacp building
--- Compile button always enabled now, message box will inform of missing information
--- Added image converting, any type/size should work
--- bug fixes
--- stability improvement ;)
-
-
-V3.0.1
-- fixed bug with speacial characters in app name
-- added logo folder in "Resources" folder, insert your own if you like
-- added some exception comments for common user errors
-- added keys.dat-template.txt for layout and keys required
-
-v3.0.0
-- removed need for Nintendo Sdk tools, now legal
-- cleaned up code
-- added more file checks
-- added title key to nsp name for better keeping track of used title keys
-- restricted title id to hex values only
-- added more catch exceptions to prevent crashes
-- cleaned up readme
-
-v2.0.1
-- turns out im not good at visual aspects so undid most of my visual aspects
-- removed import icon, just click the icon to change now
-- added file check for authtool, metatool, and devkitpro. no longer crashes if missing.
-
-V2.0.0
-- face lift to make it look a little nicer
-- more code cleanup
-- deletes temp files on exit now
-
-v1.0.6
-- major code cleanup, better function calling
-- auto reload app after build in case you want to build another nsp
-- fixed bug with folder builing order
-
-v1.0.5
--Restricted Title id input to 16 characters
-
-v1.0.4
-- added builing .nsp
-- added auto import .nro (for romfs)
-
-v1.0.3
-- added meta creation
-- added pathing of npdm
-- added icon import and size check
-
-v1.0.2 
-- fixed crash when lauching from paths with spaces
-- implemented resources
