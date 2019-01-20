@@ -18,7 +18,7 @@ v3.3.0
 - Fixed directory cleaning
 - Fixed special characters displaying (?) *Limtied to Switchs Character Library*
 - Fixed Crash if icon was set and then an icon was loaded from a .nro
-- Custom error handling, no more crashes for incorrect paths (Nothing fancy but you normally see this)
+- Custom error handling, no more crashes for incorrect paths (Nothing fancy but you shouldnt normally see this)
 <p align="center"> 
 <img src="https://github.com/Root-MtX/Nro2Nsp/blob/master/Images/errorOutput.jpg">
 </p>
@@ -42,11 +42,10 @@ v3.3.0
 - Linux use hasnt been tested fully, may experiance issues
 
 ## How to run:
-----
-# Windows 
+### Windows 
 - Run Nro2Nsp.exe
 
-# Mac/Linux 
+### Mac/Linux 
 - open terminal.app
 - cd to folder ex: cd Desktop/Nro2Nsp
 - run "sudo mono --arch=32 ./Nro2Nsp.exe *linux doesnt support/require --arch=32 according to reports*
