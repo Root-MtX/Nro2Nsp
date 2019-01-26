@@ -9,7 +9,7 @@
 ## Whats New:
 v3.3.1
 - Removed Popup for Select User Account
-- Stabilty Improvements
+- Stability Improvements
 
 v3.3.0
 - Fixed lockup when selecting (+) on forwarder nro when loaded in the background
