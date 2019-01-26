@@ -7,6 +7,9 @@
 </p>
 
 ## Whats New:
+v3.3.1
+- Removed Popup for Select User Account
+- Stabilty Improvements
 
 v3.3.0
 - Fixed lockup when selecting (+) on forwarder nro when loaded in the background
@@ -33,6 +36,7 @@ v3.3.0
 - [Mono](https://www.mono-project.com/) - for Mac or Linux 
 
 ## Special notes:
+- If you're getting an error "234C02" when installing, then your cfw patches are wrong/missing.
 - To load Meta information from .nro automatically, load the .nro by clicking "romfs" and choose yes.
   This will automatically load all the information from the .nro. If you want to use sdmc then select "sdmc" after and use as normal -- may incorperate import button instead if requested
 - Some nros are not working with romfs (old tinfoil, dOPUS) use sdmc for those for now
