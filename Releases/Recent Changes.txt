@@ -1,0 +1,27 @@
+Recent Changelog:
+-----------------
+
+v3.3.2 Beta 1:
+- Added application update notifcations with downloading (beta/stable) *Betas enabled by default*
+- Added nologo option
+- Fixed Icon loss of quality even if conversion isnt required
+- Can import .nro data from Icon box now (either icon only or icon and all meta)
+- Added changelog option with update notification
+
+v3.3.1
+- Removed Popup for Select User Account
+- Stability Improvements
+
+v3.3.0
+- Fixed lockup when selecting (+) on forwarder nro when loaded in the background
+- Devkitpro no longer needed (Thanks Natinusala)
+- Retroarch rom forwarders now supported (Thanks Natinusala)
+- Tweaks to NACP and NPDM building
+- Added core database (./Resources/cores.xml)
+- Added rom path database (./Resources/pahts.xml)
+- Fixed directory cleaning
+- Fixed special characters displaying as (?) -- Limtied to Switchs Character Library
+- Fixed crash if icon was set and then an icon was loaded from a .nro
+- Will only clear the icon if build is successful
+- Fixed rolling id would count when build failed
+- Custom error handling, no more crashes for incorrect paths (Nothing fancy but you shouldnt normally see this)

@@ -1,0 +1,106 @@
+Fill Changelog:
+---------------
+
+v3.3.2 Beta 1:
+- Added application update notifcations with downloading (beta/stable) *Betas enabled by default*
+- Added nologo option
+- Fixed Icon loss of quality even if conversion isnt required
+- Can import .nro data from Icon box now (either icon only or icon and all meta)
+- Added changelog option with update notification
+
+v3.3.1
+- Removed Popup for Select User Account
+- Stability Improvements
+
+v3.3.0
+- Fixed lockup when selecting (+) on forwarder nro when loaded in the background
+- Devkitpro no longer needed (Thanks Natinusala)
+- Retroarch rom forwarders now supported (Thanks Natinusala)
+- Tweaks to NACP and NPDM building
+- Added core database (./Resources/cores.xml)
+- Added rom path database (./Resources/pahts.xml)
+- Fixed directory cleaning
+- Fixed special characters displaying as (?) -- Limtied to Switchs Character Library
+- Fixed crash if icon was set and then an icon was loaded from a .nro
+- Will only clear the icon if build is successful
+- Fixed rolling id would count when build failed
+- Custom error handling, no more crashes for incorrect paths (Nothing fancy but you shouldnt normally see this)
+
+v3.2.2
+-- Added: Title Ids changed to 05xxxxxxxxxx0000
+-- Fixed: Rolling Id adjusted to new id
+-- Added: Randomize Title id button added
+-- Added: Auto import .nro icon, app name, author, and version
+-- Fixed: .netframework error certain people were experiancing
+-- Fixed: some settings being set by default
+ 
+v3.2.1
+-- fixed issue with newest devkitpro update *now requires latest to build*
+-- added settings tab 
+-- fixed makefile naming for linux
+-- fixed dekitpro location error if running app from remote drive
+-- added rolling title id 
+-- added preset author
+-- added custom devkitpto
+-- added perserve data
+
+
+v3.2
+-- Rewrote code for better structure
+-- uses winforms now and compatable with mono for multiplatform support
+-- rebuilt resources data into .dll library
+-- Added more checks and error reports
+-- Added log.txt in "Resources" for trobuleshooting
+-- added building message (only functional on win)
+-- removed linkle and added in app control.nacp building
+-- Compile button always enabled now, message box will inform of missing information
+-- Added image converting, any type/size should work
+-- bug fixes
+-- stability improvement ;)
+
+
+V3.0.1
+- fixed bug with speacial characters in app name
+- added logo folder in "Resources" folder, insert your own if you like
+- added some exception comments for common user errors
+- added keys.dat-template.txt for layout and keys required
+
+v3.0.0
+- removed need for Nintendo Sdk tools, now legal
+- cleaned up code
+- added more file checks
+- added title key to nsp name for better keeping track of used title keys
+- restricted title id to hex values only
+- added more catch exceptions to prevent crashes
+- cleaned up readme
+
+v2.0.1
+- turns out im not good at visual aspects so undid most of my visual aspects
+- removed import icon, just click the icon to change now
+- added file check for authtool, metatool, and devkitpro. no longer crashes if missing.
+
+V2.0.0
+- face lift to make it look a little nicer
+- more code cleanup
+- deletes temp files on exit now
+
+v1.0.6
+- major code cleanup, better function calling
+- auto reload app after build in case you want to build another nsp
+- fixed bug with folder builing order
+
+v1.0.5
+-Restricted Title id input to 16 characters
+
+v1.0.4
+- added builing .nsp
+- added auto import .nro (for romfs)
+
+v1.0.3
+- added meta creation
+- added pathing of npdm
+- added icon import and size check
+
+v1.0.2 
+- fixed crash when lauching from paths with spaces
+- implemented resources
