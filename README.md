@@ -7,6 +7,22 @@
 </p>
 
 ## Whats New:
+
+### Beta Release:
+[v3.3.2 Beta 1:](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
+- Added application update notifcations with downloading (beta/stable setting - beta is enabled by default)
+- Fixed Icon loss of quality even if conversion isnt required
+- Can import .nro data from Icon box now (either icon only or icon and all meta)
+- Added changelog option with update notification
+- Added Logo Menu in settings 
+- Added version checks
+- Various loggger additions
+- Added Logos to Logo folder (Credits: JAS, jnackmclain, Jafece)
+
+
+Please Note this is beta and it may experiance bugs/issues, please report them so I can clean them up before Stable releases
+
+### Stable Release:
 v3.3.1
 - Removed Popup for Select User Account
 - Stability Improvements
