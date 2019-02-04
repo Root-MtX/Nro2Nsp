@@ -1,5 +1,11 @@
 Full Changelog:
 ---------------
+v3.3.2 Beta 2:
+- Changed "set logos as default" to a check box instead of a diaglog box
+- "No logo" option now sets icons to black in logo menu 
+- Code clean up
+- Small changes to update notifications
+
 v3.3.2 Beta 1:
 - Added application update notifcations with downloading (beta/stable setting - beta is enabled by default)
 - Fixed Icon loss of quality even if conversion isnt required
@@ -9,7 +15,6 @@ v3.3.2 Beta 1:
 - Added version checks
 - Various loggger additions
 - Added Logos to Logo folder (Credits: JAS, jnackmclain, Jafece)
-
 
 v3.3.1
 - Removed Popup for Select User Account

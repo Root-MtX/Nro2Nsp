@@ -9,7 +9,13 @@
 ## Whats New:
 
 ### Beta Release:
-[v3.3.2 Beta 1:](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
+[v3.3.2 Beta 2:](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
+- Changed "set logos as default" to a check box instead of a diaglog box
+- "No logo" option now sets icons to black in logo menu 
+- Code clean up
+- Small changes to update notifications
+
+v3.3.2 Beta 1:
 - Added application update notifcations with downloading (beta/stable setting - beta is enabled by default)
 - Fixed Icon loss of quality even if conversion isnt required (.jpg/.jpeg 256x256 doesnt need conversion)
 - Can import .nro data from Icon box now (either icon only or icon and all meta)
