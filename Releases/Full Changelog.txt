@@ -1,5 +1,12 @@
 Full Changelog:
 ---------------
+v3.3.2 Beta 3:
+- Fixed Hbmenu Forwarder would crash when exiting a loaded nro
+- Fixed Logs deleting/missing build information 
+- Added more logos in logo folder (Credits: jnackmclain)
+- Fixed Logo error when build failed and another build was attempted
+- Minor stabilty tweaks 
+
 v3.3.2 Beta 2:
 - Changed "set logos as default" to a check box instead of a diaglog box
 - "No logo" option now sets icons to black in logo menu 
