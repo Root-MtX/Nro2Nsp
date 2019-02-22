@@ -9,7 +9,21 @@
 ## Whats New:
 
 ### Beta Release:
-[v3.3.2 Beta 3:](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
+[v3.3.2 Beta 4:](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
+- Added basic theming 
+- Added settings.xml that will export saved settings so saved values will not need to be changed each update
+- Settings will be saved to /user/appdata/roaming/Nro2Nsp/settings.xml if it fails to write there then 
+  it will be saved at ./Resources/setting.xml
+- Settings will load from /user/appdata/roaming/Nro2Nsp/settings.xml or ./Resources/setting.xml 
+  (./Resources/ takes priority)
+- Added export settings link in settings menu
+- Fixed default rom paths.xml to follow Retroarch Ultimate Pack (Credits: jnackmclain)
+- Even more Logos (Credits: JAS, jnackmclain, Jafece)
+- Added [] around title id for use with nut gui
+- keys.dat can be loaded from ./Resources/ folder or Drive:/Users/user/AppData/Roaming/Nro2Nsp/
+  (./Resources/ takes priority)
+
+v3.3.2 Beta 3:
 - Fixed Hbmenu Forwarder would crash when exiting a loaded nro
 - Fixed Logs deleting/missing build information 
 - Added more logos in logo folder (Credits: jnackmclain)
@@ -58,7 +72,8 @@ v3.3.0
 
 
 ## Requirements: 
-- Keys.dat file added to the "Resources" folder -- refer to "keys.dat template for layout and required keys
+- Keys.dat file added to the "Resources" folder or "Drive:/Users/user/AppData/Roaming/Nro2Nsp/" 
+  refer to "keys.dat template for layout and required keys
 - [.NetFramework](https://www.microsoft.com/en-ca/download/details.aspx?id=49981) - For Windows
 - [Mono](https://www.mono-project.com/) - for Mac or Linux 
 
