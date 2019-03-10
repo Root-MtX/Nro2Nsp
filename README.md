@@ -3,7 +3,7 @@
     <b> This is an easy to use nsp builder that will make rediction nsps or Retroarch Forwarders out of Nros</b><br>
 </p>
 <p align="center"> 
-<img src="https://github.com/Root-MtX/Nro2Nsp/blob/master/Images/https://raw.githubusercontent.com/Root-MtX/Nro2Nsp/master/Images/themedMenu.JPG">
+<img src="https://github.com/Root-MtX/Nro2Nsp/blob/master/Images/themedMenu.JPG?raw=true">
 </p>
 
 ## Whats New:
