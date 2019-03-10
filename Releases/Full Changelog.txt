@@ -1,5 +1,22 @@
 Full Changelog:
 ---------------
+v3.3.2 Stable
+
+- Added "Custom Keys Path" to load keys from your own path
+- Fixed keys file missing error from Resources folder
+- (Keys.dat, Keys.txt, and prod.keys) now all supported
+- Added Help icons on main page and settings page for help with use/settings
+- Added "Key Generation" setting in Settings menu
+- Added LinkLabel theming
+- Fixed "Settings.xml" loading error
+- Added "Icon Database" LinkLabel to community collection link
+- Removed "Old Style Title Id" From setings
+- Updated Keys Template file
+- Added delcared path checking on the app side
+
+Plus the addtion of the following beta features
+
+
 v3.3.2 Beta 4:
 - Added basic theming 
 - Added settings.xml that will export saved settings so saved values will not need to be changed each update
