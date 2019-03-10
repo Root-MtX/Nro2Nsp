@@ -9,7 +9,7 @@
 ## Whats New:
 
 ### Stable Release:
-[v3.3.2 Stable](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
+[v3.3.2 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.2)
 - Added "Custom Keys Path" to load keys from your own path
 - Fixed keys file missing error from Resources folder
 - (Keys.dat, Keys.txt, and prod.keys) now all supported
