@@ -9,7 +9,16 @@
 ## Whats New:
 
 ### Stable Release:
-[v3.3.2 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.2)
+[v3.3.3 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.3)
+- Fixed "no logo" enable checkbox stuck enabled
+- Removed settings locations and replaced with export/import settings
+- Fixed crash when using application defaults 
+- Changed image conversion to prvent quailty loss on non jpeg images and non 256x256 images
+- Added image color checks to prevent "?" icon
+- Added Custom Message Box with theme support
+- Updated icon database
+
+v3.3.2 Stable
 - Added "Custom Keys Path" to load keys from your own path
 - Fixed keys file missing error from Resources folder
 - (Keys.dat, Keys.txt, and prod.keys) now all supported
