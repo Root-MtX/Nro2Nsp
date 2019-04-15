@@ -16,6 +16,7 @@
 - Revamped dialog boxes
 - Added psp core and rom paths
 - Improved logger for troubleshooting
+- Fixed error with spaced in path
 
 v3.3.3
 - Fixed "no logo" enable checkbox stuck enabled
