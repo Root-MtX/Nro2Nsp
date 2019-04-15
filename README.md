@@ -9,7 +9,15 @@
 ## Whats New:
 
 ### Stable Release:
-[v3.3.3 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.3)
+[v3.3.4 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.4)
+- Changed icon conversion again with option to disable conversion, should fix ? icons
+- Changed working directory/folder permissions
+- Added Message for settings import is using for the first time
+- Revamped dialog boxes
+- Added psp core and rom paths
+- Improved logger for troubleshooting
+
+v3.3.3
 - Fixed "no logo" enable checkbox stuck enabled
 - Removed settings locations and replaced with export/import settings
 - Fixed crash when using application defaults 
