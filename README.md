@@ -9,6 +9,12 @@
 ## Whats New:
 
 ### Stable Release:
+v3.3.5 Beta 1:
+- Fixed hacbrewpack error due to file permissions
+- Adjusted npdm to prevent save data allocation
+- Started custom npdm/nacp creation framework (to be completed)
+- Refractoring
+- more to be completed once i get free time
 [v3.3.4 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.4)
 - Changed icon conversion again with option to disable conversion, should fix ? icons
 - Changed working directory/folder permissions
