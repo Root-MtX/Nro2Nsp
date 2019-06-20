@@ -9,7 +9,7 @@
 ## Whats New:
 
 ### Stable Release:
-v3.3.5 Beta 1:
+[v3.3.5 Beta 1:](https://github.com/Root-MtX/Nro2Nsp/blob/master/Releases/Betas/Nro2Nsp%203.3.5%20-%20Beta%201.zip?raw=true)
 - Fixed hacbrewpack error due to file permissions
 - Adjusted npdm to prevent save data allocation
 - Started custom npdm/nacp creation framework (to be completed)
