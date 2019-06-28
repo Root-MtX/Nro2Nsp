@@ -1,5 +1,8 @@
 Recent Changelog:
 -----------------
+v3.3.5 Beta 2:
+- Fixed npdm missing error, silly mistake i made
+
 v3.3.5 Beta 1:
 - Fixed hacbrewpack error due to file permissions
 - Adjusted npdm to prevent save data allocation
