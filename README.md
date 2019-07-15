@@ -8,15 +8,30 @@
 
 ## Whats New:
 
-### Stable Release:
+### Releases:
+v3.3.5 Beta 3: 
+- Special thanks to Liam and LeMageFro for testing and vast knowleadge
+- Added warning about romfs compatibility
+- Fixed "Keyfile" missing error 
+- Fixed Nro data import repeating error messages
+- Updated hacpackbrew
+- Updated Nstool (requires visual studio C++ 2015)
+- Appears to have fixed could not start software error
+- Removed savedata allocation
+- Added gif size warning message if greater than 60kb
+- Added UnquailifiedApproval flag in ndpm (Thanks Liam)
+- Fixed KernalPermisson
+
 v3.3.5 Beta 2:
 - Fixed npdm missing error, silly mistake i made
+
 v3.3.5 Beta 1:
 - Fixed hacbrewpack error due to file permissions
 - Adjusted npdm to prevent save data allocation
 - Started custom npdm/nacp creation framework (to be completed)
 - Refractoring
 - more to be completed once i get free time
+
 [v3.3.4 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.4)
 - Changed icon conversion again with option to disable conversion, should fix ? icons
 - Changed working directory/folder permissions

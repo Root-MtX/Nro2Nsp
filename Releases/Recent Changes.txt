@@ -1,5 +1,18 @@
 Recent Changelog:
 -----------------
+v3.3.5 Beta 3: 
+- Special thanks to Liam and LeMageFro for testing and vast knowleadge
+- Added warning about romfs compatibility
+- Fixed "Keyfile" missing error 
+- Fixed Nro data import repeating error messages
+- Updated hacpackbrew
+- Updated Nstool (requires visual studio C++ 2015)
+- Appears to have fixed could not start software error
+- Removed savedata allocation
+- Added gif size warning message if greater than 60kb
+- Added UnquailifiedApproval flag in ndpm (Thanks Liam)
+- Fixed KernalPermisson
+
 v3.3.5 Beta 2:
 - Fixed npdm missing error, silly mistake i made
 
