@@ -1,9 +1,13 @@
 Recent Changelog:
 -----------------
-v3.3.5 Beta 3: 
-- Special thanks to Liam and LeMageFro for testing and vast knowleadge
+v3.3.5
+Things added since Beta:
+- Recompiled for 9.0.0 (note nros forwarded to must be recompiled for 9.0.0 as well)
+
+Things added in Betas:
+Special thanks to Liam and LeMageFro for testing and vast knowleadge
 - Added warning about romfs compatibility
-- Fixed "Keyfile" missing error 
+- Fixed "Keyfile" missing error
 - Fixed Nro data import repeating error messages
 - Updated hacpackbrew
 - Updated Nstool (requires visual studio C++ 2015)
@@ -12,16 +16,10 @@ v3.3.5 Beta 3:
 - Added gif size warning message if greater than 60kb
 - Added UnquailifiedApproval flag in ndpm (Thanks Liam)
 - Fixed KernalPermisson
-
-v3.3.5 Beta 2:
-- Fixed npdm missing error, silly mistake i made
-
-v3.3.5 Beta 1:
-- Fixed hacbrewpack error due to file permissions
+- Fixed rror due to file permissions
 - Adjusted npdm to prevent save data allocation
 - Started custom npdm/nacp creation framework (to be completed)
 - Refractoring
-- more to be completed once i get free time
 
 v3.3.4 Fix
 - Changed icon conversion again with option to disable conversion, should fix ? icons
@@ -41,54 +39,3 @@ v3.3.3 Stable
 - Added image color checks to prevent "?" icon
 - Added Custom Message Box with theme support
 - Updated icon database
-
-v3.3.2 Stable
-- Added "Custom Keys Path" to load keys from your own path
-- Fixed keys file missing error from Resources folder
-- (Keys.dat, Keys.txt, and prod.keys) now all supported
-- Added Help icons on main page and settings page for help with use/settings
-- Added "Key Generation" setting in Settings menu
-- Added LinkLabel theming
-- Fixed "Settings.xml" loading error
-- Added "Icon Database" LinkLabel to community collection link
-- Removed "Old Style Title Id" From setings
-- Updated Keys Template file
-- Added delcared path checking on the app side
-Plus the addtion of the following beta features
-
-v3.3.2 Beta 4:
-- Added basic theming 
-- Added settings.xml that will export saved settings so saved values will not need to be changed each update
-- Settings will be saved to /user/appdata/roaming/Nro2Nsp/settings.xml if it fails to write there then 
-  it will be saved at ./Resources/setting.xml
-- Settings will load from /user/appdata/roaming/Nro2Nsp/settings.xml or ./Resources/setting.xml 
-  (./Resources/ takes priority)
-- Added export settings link in settings menu
-- Fixed default rom paths.xml to follow Retroarch Ultimate Pack (Credits: jnackmclain)
-- Even more Logos (Credits: JAS, jnackmclain, Jafece)
-- Added [] around title id for use with nut gui
-- keys.dat can be loaded from ./Resources/ folder or Drive:/Users/user/AppData/Roaming/Nro2Nsp/
-  (./Resources/ takes priority)
-
-v3.3.2 Beta 3:
-- Fixed Hbmenu Forwarder would crash when exiting a loaded nro
-- Fixed Logs deleting/missing build information 
-- Added more logos in logo folder (Credits: JAS, jnackmclain, Jafece)
-- Fixed Logo error when build failed and another build was attempted
-- Minor stabilty tweaks 
-
-v3.3.2 Beta 2:
-- Changed "set logos as default" to a check box instead of a diaglog box
-- "No logo" option now sets icons to black in logo menu 
-- Code clean up
-- Small changes to update notifications
-
-v3.3.2 Beta 1:
-- Added application update notifcations with downloading (beta/stable setting - beta is enabled by default)
-- Fixed Icon loss of quality even if conversion isnt required
-- Can import .nro data from Icon box now (either icon only or icon and all meta)
-- Added changelog option with update notification
-- Added Logo Menu in settings 
-- Added version checks
-- Various loggger additions
-- Added Logos to Logo folder (Credits: JAS, jnackmclain, Jafece)
