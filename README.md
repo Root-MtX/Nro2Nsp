@@ -9,6 +9,10 @@
 ## Whats New:
 
 ### Releases:
+[3.3.6 Beta 1](https://github.com/Root-MtX/Nro2Nsp/raw/master/Releases/Betas/Nro2Nsp%203.3.5%20-%20Beta%201.zip)
+- Added export forwarders as "Nros" and can be launched from the HBMenu (Note youll need to use Title Overide for titles that require more ram)
+- Added Setting to allow offical TitleId range, Use with caution to avoid conflicting ids (Allows Hid-mitm)
+
 [v3.3.5 Stable](https://github.com/Root-MtX/Nro2Nsp/releases/tag/3.3.5)
 Things added since Beta:
 - Recompiled for 9.0.0 (note nros forwarded to must be recompiled for 9.0.0 as well)
