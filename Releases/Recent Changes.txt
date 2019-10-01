@@ -1,5 +1,9 @@
 Recent Changelog:
 -----------------
+3.3.6 Beta 1:
+- Add export forwarders as "Nros" and can be launched from the HBMenu (Note youll need to use Title Overide for titles that require more ram)
+- Added Setting to allow offical TitleId range, Use with caution to avoid conflicting ids (Allows Hid-mitm)
+
 v3.3.5
 Things added since Beta:
 - Recompiled for 9.0.0 (note nros forwarded to must be recompiled for 9.0.0 as well)
