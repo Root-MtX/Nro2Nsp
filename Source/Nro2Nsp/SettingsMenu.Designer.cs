@@ -181,6 +181,7 @@
             // SettingSaveButton
             // 
             this.SettingSaveButton.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.SettingSaveButton.ForeColor = System.Drawing.Color.Black;
             this.SettingSaveButton.Location = new System.Drawing.Point(145, 230);
             this.SettingSaveButton.Name = "SettingSaveButton";
             this.SettingSaveButton.Size = new System.Drawing.Size(75, 27);
@@ -224,6 +225,7 @@
             // SettingCancelButton
             // 
             this.SettingCancelButton.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.SettingCancelButton.ForeColor = System.Drawing.Color.Black;
             this.SettingCancelButton.Location = new System.Drawing.Point(226, 230);
             this.SettingCancelButton.Name = "SettingCancelButton";
             this.SettingCancelButton.Size = new System.Drawing.Size(75, 27);
@@ -236,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(495, 269);
             this.Controls.Add(this.SettingCancelButton);
             this.Controls.Add(this.label5);
@@ -255,6 +257,7 @@
             this.Controls.Add(this.RollingIdClick);
             this.Controls.Add(this.CustomAuthorClick);
             this.Controls.Add(this.CustomDevClick);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingsMenu";
             this.Text = "Settings";

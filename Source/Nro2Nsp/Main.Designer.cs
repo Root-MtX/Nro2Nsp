@@ -52,6 +52,7 @@
             // compile_button
             // 
             this.compile_button.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.compile_button.ForeColor = System.Drawing.Color.Black;
             this.compile_button.Location = new System.Drawing.Point(108, 316);
             this.compile_button.Name = "compile_button";
             this.compile_button.Size = new System.Drawing.Size(93, 25);
@@ -236,6 +237,7 @@
             // btn_exit
             // 
             this.btn_exit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_exit.ForeColor = System.Drawing.Color.Black;
             this.btn_exit.Location = new System.Drawing.Point(241, 316);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(93, 25);
@@ -247,7 +249,7 @@
             // Nro
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(469, 364);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.Randomize);
@@ -266,6 +268,8 @@
             this.Controls.Add(this.sdmc_select);
             this.Controls.Add(this.Icon_Button);
             this.Controls.Add(this.compile_button);
+            this.Font = new System.Drawing.Font("Roboto Th", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Nro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
