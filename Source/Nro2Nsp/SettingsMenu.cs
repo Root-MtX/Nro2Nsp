@@ -210,8 +210,7 @@ namespace MtX.Nro2Nsp
 
         private void SettingCancelButton_Click(object sender, EventArgs e)
         {
-            SettingsMenu settingsMenu = new SettingsMenu();
-            settingsMenu.Close();
+            this.Close();
         }
     }
 }

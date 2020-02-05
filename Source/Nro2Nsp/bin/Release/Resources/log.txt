@@ -7,3 +7,21 @@ Rolling Id Enable: False
 Rolling Id Value: 
 Perserve Data Enable: False
 Old Style Title Key Enable: False
+Settings Changed:
+Custom Devkit Enable: False
+Custom Devkit Path: 
+Preset Author Enable: False
+Preset Authot Value: 
+Rolling Id Enable: False
+Rolling Id Value: 
+Perserve Data Enable: False
+Old Style Title Key Enable: False
+Settings Changed:
+Custom Devkit Enable: False
+Custom Devkit Path: 
+Preset Author Enable: False
+Preset Authot Value: 
+Rolling Id Enable: False
+Rolling Id Value: 
+Perserve Data Enable: False
+Old Style Title Key Enable: False
