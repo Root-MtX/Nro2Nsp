@@ -15,6 +15,45 @@ namespace MtX.Nro2Nsp
         string nropath = null;
         string nroname = null;
 
+        private void on_textClick_namebox(object sender, EventArgs e)
+        {
+            if (name_box.Text == "App Name")
+            {
+                name_box.Text = "";
+
+                name_box.ForeColor = Color.Black;
+            }
+        }
+
+        private void leave_textClick_namebox(object sender, EventArgs e)
+        {
+            if (name_box.Text == "")
+            {
+                name_box.Text = "App Name";
+
+                name_box.ForeColor = Color.Silver;
+            }
+        }
+
+        private void on_authorTextClick(object sender, EventArgs e)
+        {
+            if(author_box.Text == "Author")
+            {
+                author_box.Text = "";
+
+                author_box.ForeColor = Color.Black;
+            }
+        }
+
+        private void leave_authorTextClick(object sender, EventArgs e)
+        {
+            if(author_box.Text == "")
+            {
+                author_box.Text = "Author";
+
+                author_box.ForeColor = Color.Silver;
+            }
+        }
 
         public Nro()
         {
@@ -264,6 +303,10 @@ namespace MtX.Nro2Nsp
             else
             { MessageBox.Show("Disable \"Rolling Title Id\" in settings to use randomize feature"); }
         }
-    }
 
+        private void Btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+    }
 }

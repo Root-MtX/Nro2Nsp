@@ -32,3 +32,12 @@ C:\Users\Matts_Surface\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\Control
 C:\Users\Matts_Surface\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\Control.csproj.CoreCompileInputs.cache
 C:\Users\Matts_Surface\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\MtX.Control.dll
 C:\Users\Matts_Surface\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\MtX.Control.pdb
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\bin\Release\MtX.Control.dll.config
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\bin\Release\MtX.Control.dll
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\bin\Release\MtX.Control.pdb
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\Control.csprojAssemblyReference.cache
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\MtX.Control.Properties.Resources.resources
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\Control.csproj.GenerateResource.cache
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\Control.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\MtX.Control.dll
+C:\Users\PC\Desktop\Github\Nro2Nsp\Source\Control\obj\Release\MtX.Control.pdb

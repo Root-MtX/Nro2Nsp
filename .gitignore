@@ -1,4 +1,3 @@
-
 Source/.vs/MtX.Nro2Nsp/v15/.suo
 Source/.vs/MtX.Nro2Nsp/v15/Browse.VC.db
 Source/.vs/MtX.Nro2Nsp/v15/ipch/AutoPCH/16d248e51c3f0957/MAIN.ipch
@@ -276,3 +275,4 @@ Source/.vs/MtX.Nro2Nsp/v15/Server/sqlite3/storage.ide-shm
 Source/.vs/MtX.Nro2Nsp/v15/Server/sqlite3/storage.ide
 Source/.vs/MtX.Nro2Nsp/v15/Browse.VC.db
 Source/.vs/MtX.Nro2Nsp/v15/.suo
+*.exe
