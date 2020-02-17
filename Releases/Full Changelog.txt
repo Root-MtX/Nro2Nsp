@@ -1,5 +1,12 @@
 Full Changelog:
 ---------------
+3.3.6 Beta 2:
+- Fixed Rolling TitleId error
+- Improved Failed build error message
+- Fixed extra files being saved to pc
+- Added Keyfile checks with Value Compare (experimental)
+- Updated Key Generation Revisions
+
 3.3.6 Beta 1:
 - Add export forwarders as "Nros" and can be launched from the HBMenu (Note youll need to use Title Overide for titles that require more ram)
 - Added Setting to allow offical TitleId range, Use with caution to avoid conflicting ids (Allows Hid-mitm)
