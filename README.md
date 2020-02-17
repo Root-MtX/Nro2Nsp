@@ -9,6 +9,13 @@
 ## Whats New:
 
 ### Releases:
+[3.3.6 Beta 2](https://github.com/Root-MtX/Nro2Nsp/raw/master/Releases/Betas/Nro2Nsp%203.3.6%20-%20Beta%201.zip)
+- Fixed Rolling TitleId error
+- Improved Failed build error message
+- Fixed extra files being saved to pc
+- Added Keyfile checks with Value Compare (experimental)
+- Updated Key Generation Revisions
+
 [3.3.6 Beta 1](https://github.com/Root-MtX/Nro2Nsp/raw/master/Releases/Betas/Nro2Nsp%203.3.6%20-%20Beta%201.zip)
 - export forwarders as "Nros" - Rom Forwarders that can be launched from the HBMenu instead of the Homescreen (Note youll need to use Title Overide for titles that require more ram)
 - Added Setting to allow offical TitleId range, Use with caution to avoid conflicting ids (Allows Hid-mitm)
@@ -33,89 +40,6 @@ Special thanks to Liam and LeMageFro for testing and vast knowleadge
 - Adjusted npdm to prevent save data allocation
 - Started custom npdm/nacp creation framework (to be completed)
 - Refractoring
-
-v3.3.4 Stable
-- Changed icon conversion again with option to disable conversion, should fix ? icons
-- Changed working directory/folder permissions
-- Added Message for settings import is using for the first time
-- Revamped dialog boxes
-- Added psp core and rom paths
-- Improved logger for troubleshooting
-- Fixed error with spaced in path
-
-v3.3.3
-- Fixed "no logo" enable checkbox stuck enabled
-- Removed settings locations and replaced with export/import settings
-- Fixed crash when using application defaults 
-- Changed image conversion to prvent quailty loss on non jpeg images and non 256x256 images
-- Added image color checks to prevent "?" icon
-- Added Custom Message Box with theme support
-- Updated icon database
-
-v3.3.2 Stable
-- Added "Custom Keys Path" to load keys from your own path
-- Fixed keys file missing error from Resources folder
-- (Keys.dat, Keys.txt, and prod.keys) now all supported
-- Added Help icons on main page and settings page for help with use/settings
-- Added "Key Generation" setting in Settings menu
-- Added LinkLabel theming
-- Fixed "Settings.xml" loading error
-- Added "Icon Database" LinkLabel to community collection link
-- Removed "Old Style Title Id" From setings
-- Updated Keys Template file
-- Plus the addtion of the following beta features
-
-Beta 4:
-- Added basic theming 
-- Added settings.xml that will export saved settings so saved values will not need to be changed each update
-- Settings will be saved to /user/appdata/roaming/Nro2Nsp/settings.xml if it fails to write there then 
-  it will be saved at ./Resources/setting.xml
-- Settings will load from /user/appdata/roaming/Nro2Nsp/settings.xml or ./Resources/setting.xml 
-  (./Resources/ takes priority)
-- Added export settings link in settings menu
-- Fixed default rom paths.xml to follow Retroarch Ultimate Pack (Credits: jnackmclain)
-- Even more Logos (Credits: JAS, jnackmclain, Jafece)
-- Added [] around title id for use with nut gui
-- keys.dat can be loaded from ./Resources/ folder or Drive:/Users/user/AppData/Roaming/Nro2Nsp/
-  (./Resources/ takes priority)
-Beta 3:
-- Fixed Hbmenu Forwarder would crash when exiting a loaded nro
-- Fixed Logs deleting/missing build information 
-- Added more logos in logo folder (Credits: jnackmclain)
-Beta 2:
-- Fixed Logo error when build failed and another build was attempted
-- Minor stabilty tweaks 
-- Changed "set logos as default" to a check box instead of a diaglog box
-- "No logo" option now sets icons to black in logo menu 
-- Code clean up
-- Small changes to update notifications
-Beta 1 :
-- Added application update notifcations with downloading (beta/stable setting - beta is enabled by default)
-- Fixed Icon loss of quality even if conversion isnt required (.jpg/.jpeg 256x256 doesnt need conversion)
-- Can import .nro data from Icon box now (either icon only or icon and all meta)
-- Added changelog option with update notification
-- Added Logo Menu in settings (rec sizes logo:160x40 Animation:256x80)
-- Added version checks
-- Various loggger additions
-- Added Logos to Logo folder (Credits: JAS, jnackmclain, Jafece)
-
-v3.3.1
-- Removed Popup for Select User Account
-- Stability Improvements
-
-v3.3.0
-- Fixed lockup when selecting (+) on forwarder nro when loaded in the background
-- Devkitpro no longer needed (Thanks Natinusala)
-- Retroarch rom forwarders now supported (Thanks Natinusala)
-- Tweaks to NACP and NPDM building
-- Added core database (./Resources/cores.xml)
-- Added rom path database (./Resources/paths.xml)
-- Fixed directory cleaning
-- Fixed special characters displaying as (?) -- Limtied to Switch's Character Library
-- Fixed crash if icon was set and then an icon was loaded from a .nro
-- Will only clear the icon if build is successful
-- Fixed rolling id would count when build failed
-- Custom error handling, no more crashes for incorrect paths (Nothing fancy but you shouldnt normally see this)
 
 ### Beta Releases:
 [Beta](https://github.com/Root-MtX/Nro2Nsp/tree/master/Releases/Betas)
