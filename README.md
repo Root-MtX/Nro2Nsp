@@ -9,7 +9,7 @@
 ## Whats New:
 
 ### Releases:
-[3.3.6 Beta 2](https://github.com/Root-MtX/Nro2Nsp/raw/master/Releases/Betas/Nro2Nsp%203.3.6%20-%20Beta%201.zip)
+[3.3.6 Beta 2](https://github.com/Root-MtX/Nro2Nsp/releases/download/3.3.6Beta2/Nro2Nsp.3.3.6.-.Beta.2.zip)
 - Fixed Rolling TitleId error
 - Improved Failed build error message
 - Fixed extra files being saved to pc
