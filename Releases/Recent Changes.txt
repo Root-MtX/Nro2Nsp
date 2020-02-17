@@ -1,45 +1,12 @@
 Recent Changelog:
 -----------------
+3.3.6 Beta 2:
+Fixed Rolling TitleId error
+Improved Failed build error message
+Fixed extra files being saved to pc
+Added Keyfile checks with Value Compare (experimental)
+Updated Key Generation Revisions
+
 3.3.6 Beta 1:
 - Add export forwarders as "Nros" and can be launched from the HBMenu (Note youll need to use Title Overide for titles that require more ram)
 - Added Setting to allow offical TitleId range, Use with caution to avoid conflicting ids (Allows Hid-mitm)
-
-v3.3.5
-Things added since Beta:
-- Recompiled for 9.0.0 (note nros forwarded to must be recompiled for 9.0.0 as well)
-
-Things added in Betas:
-Special thanks to Liam and LeMageFro for testing and vast knowleadge
-- Added warning about romfs compatibility
-- Fixed "Keyfile" missing error
-- Fixed Nro data import repeating error messages
-- Updated hacpackbrew
-- Updated Nstool (requires visual studio C++ 2015)
-- Appears to have fixed could not start software error
-- Removed savedata allocation
-- Added gif size warning message if greater than 60kb
-- Added UnquailifiedApproval flag in ndpm (Thanks Liam)
-- Fixed KernalPermisson
-- Fixed rror due to file permissions
-- Adjusted npdm to prevent save data allocation
-- Started custom npdm/nacp creation framework (to be completed)
-- Refractoring
-
-v3.3.4 Fix
-- Changed icon conversion again with option to disable conversion, should fix ? icons
-- Changed working directory/folder permissions
-- Added Message for settings import is using for the first time
-- Revamped dialog boxes
-- Added psp core and rom paths
-- Improved logger for troubleshooting
-- Fixed error with spacing in paths
-
-
-v3.3.3 Stable
-- Fixed "no logo" enable checkbox stuck enabled
-- Removed settings locations and replaced with export/import settings
-- Fixed crash when using application defaults 
-- Changed image conversion to prvent quailty loss on non jpeg images and non 256x256 images
-- Added image color checks to prevent "?" icon
-- Added Custom Message Box with theme support
-- Updated icon database
