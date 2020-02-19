@@ -1,5 +1,10 @@
 Recent Changelog:
 -----------------
+3.3.6 Beta 3
+- Added "logo" and "animation" paths to core.xml for use to automatically set logs per core platform
+- (Feature Request) Added Auto set logos in logo menu -- see above
+- (Feature Request) If "Preset Author" is set to "core" in the settings menu then author box will be set to selected retroarch core platform
+
 3.3.6 Beta 2:
 - Fixed Rolling TitleId error
 - Improved Failed build error message

@@ -9,6 +9,15 @@
 ## Whats New:
 
 ### Releases:
+[3.3.6 Beta 3](https://github.com/Root-MtX/Nro2Nsp/releases/download/3.3.6Beta3/Nro2Nsp.3.3.6.-.Beta.3.zip)
+
+- Added "logo" and "animation" paths to core.xml for use to automatically set logs per core platform
+- (Feature Request) Added Auto set logos in logo menu -- see above
+- (Feature Request) If "Preset Author" is set to "core" in the settings menu then author box will be set to selected retroarch core platform
+
+**These are experimental, please report any bugs and any updates to cores.xml needed
+
+
 [3.3.6 Beta 2](https://github.com/Root-MtX/Nro2Nsp/releases/download/3.3.6Beta2/Nro2Nsp.3.3.6.-.Beta.2.zip)
 - Fixed Rolling TitleId error
 - Improved Failed build error message

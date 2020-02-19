@@ -1,0 +1,296 @@
+<details>
+	<core>
+		<name>Nintendo - Quicknes</name>
+		<path>/retroarch/cores/quicknes_liberto_libnx.nro</path>
+	<logo>NintendoLogo_Nintendo_Nintendo_Entertainment_System.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Nintendo - Nestopia</name>
+		<path>/retroarch/cores/nestopia_libretro_libnx.nro</path>
+	<logo>NintendoLogo_Nintendo_Nintendo_Entertainment_System.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Nintendo - Famicom(FCEUmm)</name>
+		<path>/retroarch/cores/fceumm_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Super Nintendo - Snex9x</name>
+		<path>/retroarch/cores/snes9x_libretro_libnx.nro</path>
+<logo>NintendoLogo_Nintendo_Super_Nintendo_Entertainment_System.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Super Nintendo - Snes9x(2010)</name>
+		<path>/retroarch/cores/snes9x2010_libretro_libnx.nro</path>
+<logo>NintendoLogo_Nintendo_Super_Nintendo_Entertainment_System.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Gameboy Advance - VBA-Next</name>
+		<path>/retroarch/cores/vba_next_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Nintendo_Game_Boy_Advance.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Gameboy Advance - Mgba</name>
+		<path>/retroarch/cores/mgba_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Nintendo_Game_Boy_Advance.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>REminiscence</name>
+		<path>/retroarch/cores/reminiscence_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Sega Saturn - Yabause</name>
+		<path>/retroarch/cores/yabause_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Sega.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Vice</name>
+		<path>/retroarch/cores/vice_x64_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Vecx</name>
+		<path>/retroarch/cores/vecx_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Quake 1 - Tyrquake</name>
+		<path>/retroarch/cores/tyrquake_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Gameboy Color - TGB Dual</name>
+		<path>/retroarch/cores/tgbdual_libretro_libnx.nro</path>
+		<logo>NintendoLogo_GameBoy_Color.png</logo>
+		<animation>TestAnimation</animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Gameboy Color - Gearboy</name>
+		<path>/retroarch/cores/gearboy_libretro_libnx.nro</path>
+		<logo>NintendoLogo_GameBoy_Color.png</logo>
+		<animation>TestAnimation</animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Gameboy Color - Gamebattle</name>
+		<path>/retroarch/cores/gambatte_libretro_libnx.nro</path>
+		<logo>NintendoLogo_GameBoy_Color.png</logo>
+		<animation>TestAnimation</animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Atari - Stella</name>
+		<path>/retroarch/cores/stella_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Atari7800.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Atari - ProSystem</name>
+		<path>/retroarch/cores/prosystem_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Atari7800.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Atari - Lynx(Handy)</name>
+		<path>/retroarch/cores/handy_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Atari_Lynx.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Doom - PrBoom</name>
+		<path>/retroarch/cores/prboom_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Pokemon Mini</name>
+		<path>/retroarch/cores/pokemini_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Sega - PicoDrive</name>
+		<path>/retroarch/cores/picodrive_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Sega.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Sega - Genesis Plus GX</name>
+		<path>/retroarch/cores/genesis_plus_gx_libretro_libnx.nro</path>
+		<logo>NintendoLogo_SegaGenesis.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Sega - Gear Station</name>
+		<path>/retroarch/cores/gearsystem_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Sega_Game_Gear.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>PS1 - PCSX Rearmed</name>
+		<path>/retroarch/cores/pcsx_rearmed_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Sony_PlayStation.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Odyssey2 - O2EM</name>
+		<path>/retroarch/cores/o2em_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Nintendo 64 - Mupen64plus</name>
+		<path>/retroarch/cores/mupen64plus_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Nintendo_Nintendo_64.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Nintendo 64 - Mupen64plus Next</name>
+		<path>/retroarch/cores/mupen64plus_next_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Nintendo_Nintendo_64.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Cave Story - NxEngine</name>
+		<path>/retroarch/cores/nxengine_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Bomberman - MrBoom</name>
+		<path>/retroarch/cores/mrboom_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Virtual Boy - Mednafen</name>
+		<path>/retroarch/cores/mednafen_vb_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Nintendo_Virtual_Boy.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>WonderSwan - Mednafen</name>
+		<path>/retroarch/cores/mednafen_wswan_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Bandai_WonderSwan.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Pc Engine - Mednafen SuperGrafx</name>
+		<path>/retroarch/cores/mednafen_supergrafx_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Pc Engine - Mednafen PCEFast</name>
+		<path>/retroarch/cores/mednafen_pce_fast_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Neo Geo Pocket - Mednafen</name>
+		<path>/retroarch/cores/mednafen_ngp_libretro_libnx.nro</path>
+		<logo>NintendoLogo_SNK_Neo_Geo_Pocket_color.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>MAME - 2003+</name>
+		<path>/retroarch/cores/mame2003_plus_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>MAME - 2003</name>
+		<path>/retroarch/cores/mame2003_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>MAME - 2000</name>
+		<path>/retroarch/cores/mame2000_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Mattel Intellivision - FreeIntv</name>
+		<path>/retroarch/cores/freeintv_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Microsoft - fMSX</name>
+		<path>/retroarch/cores/fmsx_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>Arcade - FB Alpha</name>
+		<path>/retroarch/cores/fbalpha_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>DosBox</name>
+		<path>/retroarch/cores/dosbox_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
+		<name>4DO</name>
+		<path>/retroarch/cores/4do_libretro_libnx.nro</path>
+		<logo></logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+</details> 
