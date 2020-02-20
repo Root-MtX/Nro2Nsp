@@ -9,6 +9,14 @@
 ## Whats New:
 
 ### Releases:
+This is hopefully the last beta before a stable release, fixed a couple of silly issues.
+
+[3.3.6 Beta 4](https://github.com/Root-MtX/Nro2Nsp/releases/download/3.3.6Beta4/Nro2Nsp.3.3.6.-.Beta.4.zip)
+
+Fixed error with keys with lowercase letters being flagged as invalid
+Fixed unrelated error message being displayed in some cases
+Fixed App crashing if no key files are found
+Add new information to logs to help debug issues
 [3.3.6 Beta 3](https://github.com/Root-MtX/Nro2Nsp/releases/download/3.3.6Beta3/Nro2Nsp.3.3.6.-.Beta.3.zip)
 
 - Added "logo" and "animation" paths to core.xml for use to automatically set logs per core platform
