@@ -1,4 +1,4 @@
-  # NRO2NSP
+  # NRO2NSP [![release](https://img.shields.io/github/v/release/Root-MtX/Nro2Nsp)](https://github.com/Root-MtX/Nro2Nsp/releases/latest) [![prerelease](https://img.shields.io/github/v/release/Root-MtX/Nro2Nsp?include_prereleases&label=prerelease)](https://github.com/Root-MtX/Nro2Nsp/releases)
 <p align="center">
     <b> This is an easy to use nsp builder that will make rediction nsps or Retroarch Forwarders out of Nros</b><br>
 </p>
