@@ -161,6 +161,13 @@
 		<show>true</show>
 	</core>
 	<core>
+		<name>Sega - Dreamcast</name>
+		<path>/retroarch/cores/flycast_libretro_libnx.nro</path>
+		<logo>NintendoLogo_Sega.png</logo>
+		<animation></animation>
+		<show>true</show>
+	</core>
+	<core>
 		<name>PS1 - PCSX Rearmed</name>
 		<path>/retroarch/cores/pcsx_rearmed_libretro_libnx.nro</path>
 		<logo>NintendoLogo_Sony_PlayStation.png</logo>
