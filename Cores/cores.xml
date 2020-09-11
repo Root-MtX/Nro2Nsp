@@ -1,7 +1,7 @@
 <details>
 	<core>
 		<name>Nintendo - Quicknes</name>
-		<path>/retroarch/cores/quicknes_liberto_libnx.nro</path>
+		<path>/retroarch/cores/quicknes_libretro_libnx.nro</path>
 	<logo>NintendoLogo_Nintendo_Nintendo_Entertainment_System.png</logo>
 		<animation></animation>
 		<show>true</show>
